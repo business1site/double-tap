@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Время кроссовок 2.0</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: the agency's cream/wine case frame; inside it, the client's new world in cement, graphite and chocolate, shown on phones, a browser and a chat. */
+:root {
+  /* agency frame */
+  --cream: #ECECEC; --paper: #FCFAFA; --wine: #3B3B3B; --wine-deep: #2C2C2C;
+  --ink: #2B2B2B; --muted: #7B7475; --on-wine: #FCFAFA; --on-wine-muted: #C9C2C2;
+  --line: rgba(59, 59, 59, .14); --line-on-wine: rgba(252, 250, 250, .18); --heart: #ECCACB;
+  /* client: Время кроссовок 2.0 */
+  --vk-cement: #C9C6C0; --vk-cement-2: #A8A49D; --vk-fog: #E8E6E2; --vk-graphite: #26272A;
+  --vk-choco: #4A3027; --vk-wine: #7A2232; --vk-white: #F7F6F3;
+  --f-display: "Manrope", "Helvetica Neue", Arial, sans-serif; --f-script: "Great Vibes", "Marck Script", cursive;
+  --f-body: "Manrope", "Helvetica Neue", Arial, sans-serif; --f-hand: "Caveat", "Marck Script", cursive;
+  --s-1: clamp(2.6rem, 7vw, 5.8rem); --s-2: clamp(1.9rem, 4vw, 3.2rem); --s-3: clamp(1.3rem, 2vw, 1.6rem);
+  --wrap: 1180px; --radius: 22px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 400 1.0625rem/1.55 var(--f-body); -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--cream); }
+img { display: block; max-width: 100%; }
+h1, h2, h3, h4 { margin: 0; font-weight: 400; line-height: 1.08; text-wrap: balance; }
+h1, h2 { font-family: var(--f-display); letter-spacing: -.01em; }
+p { margin: 0; }
+a { color: inherit; }
+.script { font-family: var(--f-script); font-size: 1.22em; line-height: .9; display: inline-block; transform: translateY(.06em); }
+.label { font-size: .75rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 600; color: var(--muted); }
+.band { padding-block: clamp(64px, 9vw, 120px); }
+.band--wine { background: var(--wine); color: var(--on-wine); }
+.band--wine .label { color: var(--on-wine-muted); }
+.band--paper { background: var(--paper); }
+.band--graphite { background: var(--vk-graphite); color: var(--vk-white); }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.head { display: grid; gap: 16px; max-width: 760px; margin-bottom: clamp(36px, 5vw, 56px); }
+.head h2 { font-size: var(--s-2); }
+.head p { color: var(--muted); max-width: 62ch; }
+.band--wine .head p, .band--graphite .head p { color: var(--on-wine-muted); }
+:focus-visible { outline: 2px solid var(--heart); outline-offset: 3px; border-radius: 4px; }
+
+/* Top bar */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--cream) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.logo { display: inline-flex; align-items: baseline; gap: 6px; text-decoration: none; color: var(--wine); white-space: nowrap; }
+.logo b { font: 400 1.3rem/1 var(--f-display); }
+.logo i { font: 400 1.8rem/1 var(--f-script); font-style: normal; }
+.back { font-size: .875rem; color: var(--muted); text-decoration: none; font-weight: 500; }
+.back:hover { color: var(--wine); }
+
+/* Cover */
+.cover { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 7vw, 96px); overflow-x: clip; }
+.cover .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.cover-copy { display: grid; gap: 24px; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; min-height: 30px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); font-size: .8rem; color: var(--muted); }
+.chip--fill { background: var(--wine); color: var(--on-wine); border-color: var(--wine); }
+.cover h1 { font-size: var(--s-1); color: var(--wine); }
+.cover h1 .script { font-size: 1.1em; color: var(--ink); }
+.cover .lead { font-size: clamp(1.05rem, 1.5vw, 1.2rem); max-width: 52ch; }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding-top: 24px; border-top: 1px solid var(--line); }
+.facts b { display: block; font: 400 1.05rem/1.2 var(--f-display); color: var(--wine); margin-bottom: 4px; }
+.facts span { font-size: .8rem; color: var(--muted); line-height: 1.35; display: block; }
+.concept-note { font-size: .82rem; color: var(--muted); max-width: 60ch; }
+.cover-visual { position: relative; aspect-ratio: 1 / 1.05; max-width: 100%; border-radius: 28px; overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 30%, var(--vk-fog), var(--vk-cement) 60%, var(--vk-cement-2)); display: grid; place-items: center; }
+.cover-visual .float { width: 74%; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 30px 24px rgba(38, 39, 42, .25)); }
+.cover-visual .shadow { position: absolute; bottom: 17%; width: 46%; height: 18px; border-radius: 50%; background: rgba(38, 39, 42, .28); filter: blur(10px); animation: shadow 5s ease-in-out infinite; }
+.cover-visual .tag { position: absolute; top: 22px; left: 24px; right: 24px; display: flex; justify-content: space-between; font: 600 .7rem/1 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--vk-graphite); }
+.cover-visual .hand { position: absolute; font: 600 1.6rem/1 var(--f-hand); color: var(--vk-wine); }
+.cover-visual .hand--a { right: 8%; top: 24%; transform: rotate(-6deg); }
+.cover-visual .hand--b { left: 8%; bottom: 9%; transform: rotate(-3deg); }
+@keyframes float { 50% { transform: translateY(-14px) rotate(-1.5deg); } }
+@keyframes shadow { 50% { transform: scaleX(.86); opacity: .7; } }
+@media (max-width: 860px) { .cover .wrap { grid-template-columns: 1fr; } .facts { grid-template-columns: 1fr 1fr; } }
+
+/* Lenses / audit */
+.lenses { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line-on-wine); border-left: 1px solid var(--line-on-wine); }
+.lens { padding: 26px; border-right: 1px solid var(--line-on-wine); border-bottom: 1px solid var(--line-on-wine); display: grid; gap: 14px; align-content: start; }
+.lens h3 { font: 400 1.4rem/1.15 var(--f-display); }
+.lens ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: .95rem; color: var(--on-wine-muted); }
+.lens li { display: grid; grid-template-columns: 16px 1fr; gap: 8px; }
+.lens li::before { content: "—"; color: var(--heart); }
+@media (max-width: 960px) { .lenses { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .lenses { grid-template-columns: 1fr; } }
+
+/* Before / after profile */
+.ba { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 56px); align-items: start; }
+.ba-col { display: grid; gap: 16px; justify-items: center; min-width: 0; }
+.ba-col > .label { justify-self: center; }
+.phone { width: min(340px, 100%); border-radius: 44px; background: var(--vk-graphite); padding: 10px; box-shadow: 0 40px 70px -34px rgba(38, 39, 42, .6); }
+.phone .scr { border-radius: 35px; overflow: hidden; background: #fff; color: #111; font-size: 12.5px; line-height: 1.4; }
+.ig-top { display: flex; justify-content: center; padding: 14px 14px 8px; font-weight: 700; font-size: 14px; }
+.ig-head { display: grid; grid-template-columns: 76px 1fr; gap: 14px; align-items: center; padding: 6px 14px 10px; }
+.ava { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; overflow: hidden; }
+.ava--old { background: #23209A; color: #fff; font: 800 9px/1.1 var(--f-body); text-align: center; letter-spacing: .02em; border: 3px solid #fff; box-shadow: 0 0 0 2px #E1306C; }
+.ava--new { background: var(--vk-graphite); box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--vk-cement-2); }
+.ig-stats { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.ig-stats b { display: block; font-size: 14px; }
+.ig-stats span { font-size: 11px; color: #555; }
+.ig-bio { padding: 0 14px 10px; display: grid; gap: 2px; }
+.ig-bio .nm { font-weight: 700; }
+.ig-bio a { color: #00376B; text-decoration: none; font-weight: 600; }
+.ig-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 14px 12px; }
+.ig-btns span { background: #EFEFEF; border-radius: 8px; text-align: center; padding: 7px 0; font-weight: 600; font-size: 12px; }
+.ig-btns span.p { background: #0095F6; color: #fff; }
+.ig-btns--new span.p { background: var(--vk-graphite); }
+.ig-hl { display: flex; gap: 10px; padding: 2px 12px 12px; overflow: hidden; }
+.ig-hl div { display: grid; justify-items: center; gap: 4px; flex: 0 0 54px; font-size: 10px; text-align: center; line-height: 1.15; }
+.ig-hl i { width: 54px; height: 54px; border-radius: 50%; border: 1px solid #ddd; display: grid; place-items: center; background: #F3F1EE; }
+.ig-hl--new i { background: var(--vk-fog); border-color: var(--vk-cement-2); font: 600 15px/1 var(--f-hand); color: var(--vk-wine); font-style: normal; }
+.ig-hl--old i svg { width: 34px; }
+.flag { position: relative; }
+.flag::after { content: attr(data-n); position: absolute; top: -6px; right: -6px; width: 20px; height: 20px; border-radius: 50%; background: var(--heart); color: #fff; font: 700 11px/20px var(--f-body); text-align: center; }
+.issues { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; width: min(340px, 100%); font-size: .92rem; }
+.issues li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; }
+.issues li b { width: 22px; height: 22px; border-radius: 50%; background: var(--heart); color: #fff; font: 700 .72rem/22px var(--f-body); text-align: center; }
+.fixes li b { background: var(--vk-graphite); }
+.ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.ig-grid > div { aspect-ratio: 4 / 5; position: relative; overflow: hidden; }
+@media (max-width: 760px) { .ba { grid-template-columns: 1fr; } }
+
+/* Tiles (new feed formats) */
+.t { position: relative; overflow: hidden; display: grid; place-items: center; color: var(--vk-graphite); }
+.t svg.sn { width: 72%; filter: drop-shadow(0 10px 8px rgba(0, 0, 0, .22)); }
+.t--cement { background: radial-gradient(110% 80% at 50% 30%, var(--vk-fog), var(--vk-cement) 70%); }
+.t--graphite { background: radial-gradient(110% 80% at 50% 30%, #3A3B3F, var(--vk-graphite)); color: var(--vk-white); }
+.t--choco { background: radial-gradient(110% 80% at 50% 30%, #6A4639, var(--vk-choco)); color: var(--vk-white); }
+.t--wine { background: radial-gradient(110% 80% at 50% 30%, #8E2B3D, var(--vk-wine)); color: var(--vk-white); }
+.t--fog { background: var(--vk-white); }
+.t .cap { position: absolute; left: 8%; bottom: 7%; font: 700 .5em/1.1 var(--f-body); letter-spacing: .14em; text-transform: uppercase; }
+.t .hw { position: absolute; font: 600 1em/1 var(--f-hand); color: var(--vk-wine); }
+.t--graphite .hw, .t--choco .hw, .t--wine .hw { color: var(--vk-cement); }
+.t .big { font: 800 1.5em/0.95 var(--f-body); letter-spacing: -.02em; text-transform: uppercase; text-align: center; }
+.t .clip { position: absolute; right: 8%; bottom: 8%; width: 34%; aspect-ratio: 1; background: var(--vk-white); box-shadow: 0 4px 10px rgba(0, 0, 0, .2); display: grid; place-items: center; transform: rotate(3deg); }
+.t .clip svg { width: 84%; }
+.t .person { position: absolute; bottom: 0; left: 50%; transform: translateX(-60%); width: 42%; }
+.t .play { position: absolute; top: 7%; right: 7%; width: 14%; aspect-ratio: 1; }
+.t .six { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; width: 86%; }
+.t .six span { aspect-ratio: 1; background: var(--vk-fog); display: grid; place-items: center; }
+.t .six svg { width: 80%; }
+.t .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 6px; width: 86%; }
+.t .row div { display: grid; gap: 2px; justify-items: start; font: 700 .42em/1 var(--f-body); }
+.t .row svg { width: 100%; }
+
+/* Real photos replace the drawn placeholders */
+.has-photo { background-size: cover; background-position: center; }
+.has-photo > svg.sn, .has-photo > svg.person, .has-photo > .six, .has-photo > .row,
+.cover-visual.has-photo .float, .cover-visual.has-photo .shadow, .pic.has-photo > svg { display: none; }
+.six .has-photo > svg, .clip.has-photo > svg { display: none; }
+.pic.has-photo { aspect-ratio: 1; border-radius: 16px; width: 100%; }
+.site-hero .pic.has-photo .hw { color: var(--vk-white); text-shadow: 0 1px 6px rgba(0,0,0,.35); }
+
+/* Feed formats */
+.feed-wrap { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.feed-phone { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 88px); justify-self: center; width: min(340px, 100%); }
+.feed-phone .ig-grid { font-size: 13px; }
+.formats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.fmt { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.fmt .t { aspect-ratio: 4 / 3; font-size: 22px; }
+.fmt div.txt { padding: 18px 20px 22px; display: grid; gap: 8px; align-content: start; }
+.fmt h3 { font: 600 1.05rem/1.25 var(--f-body); color: var(--ink); }
+.fmt p { font-size: .92rem; color: var(--muted); }
+.fmt .why { font-size: .82rem; color: var(--wine); font-weight: 600; }
+@media (max-width: 960px) { .feed-wrap { grid-template-columns: 1fr; } .feed-phone { position: static; } }
+@media (max-width: 560px) { .formats { grid-template-columns: 1fr; } }
+
+/* Identity */
+.idn { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.idn > div { border-radius: var(--radius); padding: clamp(24px, 3vw, 36px); min-width: 0; }
+.logo-old, .logo-new { display: grid; place-items: center; min-height: 260px; gap: 18px; position: relative; }
+.logo-old { background: var(--vk-white); color: var(--vk-graphite); }
+.logo-new { background: var(--vk-cement); color: var(--vk-graphite); }
+.idn .label { position: absolute; top: 20px; left: 24px; }
+.old-mark { width: 120px; height: 120px; border-radius: 50%; background: #23209A; color: #fff; display: grid; place-items: center; text-align: center; font: 800 italic 14px/1.1 var(--f-body); }
+.new-mark { display: flex; align-items: center; gap: 16px; }
+.new-mark svg { width: 64px; height: 64px; }
+.new-mark .wm { font: 800 clamp(1.4rem, 3vw, 2rem)/.92 var(--f-body); letter-spacing: -.01em; text-transform: uppercase; }
+.new-mark .wm span { display: block; font-weight: 500; letter-spacing: .32em; font-size: .42em; margin-top: 8px; }
+.palette { grid-column: 1 / -1; background: var(--paper); border: 1px solid var(--line); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.sw { display: grid; gap: 8px; font-size: .8rem; color: var(--muted); }
+.sw i { display: block; aspect-ratio: 1.4; border-radius: 14px; border: 1px solid var(--line); }
+.sw b { color: var(--ink); font-weight: 600; font-size: .88rem; }
+.type { grid-column: 1 / -1; background: var(--vk-graphite); color: var(--vk-white); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.type div { display: grid; gap: 6px; align-content: start; }
+.type .label { position: static; color: var(--vk-cement-2); }
+.type .a { font: 800 2.2rem/1 var(--f-body); text-transform: uppercase; letter-spacing: -.01em; }
+.type .b { font: 500 .78rem/1.3 var(--f-body); letter-spacing: .26em; text-transform: uppercase; padding-top: 12px; }
+.type .c { font: 600 2.2rem/1 var(--f-hand); color: #E9A7B1; }
+@media (max-width: 760px) { .idn { grid-template-columns: 1fr; } .palette { grid-template-columns: repeat(3, minmax(0, 1fr)); } .type { grid-template-columns: 1fr; } }
+
+/* Website */
+.browser { border-radius: 18px; overflow: hidden; background: var(--vk-white); box-shadow: 0 40px 80px -40px rgba(38, 39, 42, .6); border: 1px solid rgba(255,255,255,.08); }
+.browser .bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #E9E7E3; }
+.browser .bar i { width: 11px; height: 11px; border-radius: 50%; background: #CFCBC5; }
+.browser .bar span { margin-left: 10px; flex: 1; max-width: 360px; background: #fff; border-radius: 8px; padding: 5px 12px; font-size: .78rem; color: #666; }
+.site { color: var(--vk-graphite); font-size: 14px; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px clamp(16px, 3vw, 32px); border-bottom: 1px solid #E2DFDA; }
+.site-nav .mini { display: flex; align-items: center; gap: 10px; font: 800 .85rem/1 var(--f-body); text-transform: uppercase; }
+.site-nav .mini svg { width: 26px; height: 26px; }
+.site-nav nav { display: flex; gap: 22px; font-size: .82rem; color: #555; }
+.site-nav .tg { background: var(--vk-graphite); color: var(--vk-white); padding: 8px 14px; border-radius: 999px; font-size: .78rem; font-weight: 600; white-space: nowrap; }
+.site-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 32px); background: radial-gradient(100% 90% at 70% 40%, var(--vk-fog), var(--vk-cement) 75%); position: relative; }
+.site-hero .eyebrow { font: 600 .7rem/1 var(--f-body); letter-spacing: .2em; text-transform: uppercase; }
+.site-hero h3 { font: 800 clamp(2rem, 5.5vw, 4.4rem)/.9 var(--f-body); text-transform: uppercase; letter-spacing: -.03em; margin: 12px 0 14px; }
+.site-hero p { font-size: .92rem; max-width: 34ch; color: #3d3d40; }
+.site-hero .btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.site-hero .btns span { padding: 10px 16px; border-radius: 999px; font-size: .8rem; font-weight: 600; border: 1px solid var(--vk-graphite); }
+.site-hero .btns span:first-child { background: var(--vk-graphite); color: var(--vk-white); }
+.site-hero .pic { position: relative; display: grid; place-items: center; }
+.site-hero .pic svg { width: 100%; filter: drop-shadow(0 26px 18px rgba(38,39,42,.25)); }
+.site-hero .hw { position: absolute; font: 600 1.35rem/1 var(--f-hand); color: var(--vk-wine); }
+.cats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; padding: 20px clamp(16px, 3vw, 32px) 28px; }
+.cat { display: grid; gap: 8px; }
+.cat .t { aspect-ratio: 1; border-radius: 10px; font-size: 14px; }
+.cat b { font-size: .82rem; }
+.cat span { font-size: .72rem; color: #777; }
+@media (max-width: 760px) { .site-nav nav { display: none; } .site-hero { grid-template-columns: 1fr; } .cats { grid-template-columns: 1fr 1fr; } }
+
+.web-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(24px, 4vw, 48px); align-items: start; margin-top: clamp(32px, 5vw, 56px); }
+.notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 28px; }
+.notes div { display: grid; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line-on-wine); }
+.notes h4 { font: 600 1rem/1.3 var(--f-body); }
+.notes p { font-size: .9rem; color: var(--on-wine-muted); }
+.card-phone { width: 300px; max-width: 100%; }
+.card-phone .scr { background: var(--vk-white); }
+.pc { padding: 0 0 16px; color: var(--vk-graphite); }
+.pc .main { aspect-ratio: 1; font-size: 18px; }
+.pc .thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; padding: 6px; }
+.pc .thumbs .t { aspect-ratio: 1; font-size: 8px; border-radius: 4px; }
+.pc .thumbs .t:first-child { outline: 1.5px solid var(--vk-graphite); outline-offset: -1.5px; }
+.pc .info { padding: 6px 14px; display: grid; gap: 8px; }
+.pc .info h5 { margin: 0; font: 700 1rem/1.2 var(--f-body); }
+.pc .sizes { display: flex; flex-wrap: wrap; gap: 5px; }
+.pc .sizes span { min-width: 34px; text-align: center; padding: 6px 0; border: 1px solid #D8D5D0; border-radius: 8px; font-size: .75rem; }
+.pc .sizes span.on { background: var(--vk-graphite); color: #fff; border-color: var(--vk-graphite); }
+.pc .cta { display: block; text-align: center; background: var(--vk-graphite); color: #fff; border-radius: 12px; padding: 12px; font-weight: 600; font-size: .85rem; }
+.pc .sub { text-align: center; font-size: .75rem; color: #666; }
+.pc .sub u { text-decoration-color: var(--vk-wine); }
+@media (max-width: 860px) { .web-row { grid-template-columns: 1fr; justify-items: center; } .notes { grid-template-columns: 1fr; } }
+
+/* Bot */
+.bot { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.chat .scr { background: #E7E2DA; padding: 14px 12px 16px; display: grid; gap: 8px; font-size: 13px; min-height: 560px; align-content: start; }
+.chat .hdr { display: flex; align-items: center; gap: 10px; background: #fff; margin: -14px -12px 6px; padding: 12px 14px; }
+.chat .hdr i { width: 34px; height: 34px; border-radius: 50%; background: var(--vk-graphite); display: grid; place-items: center; }
+.chat .hdr i svg { width: 22px; }
+.chat .hdr b { display: block; font-size: 13px; }
+.chat .hdr span { font-size: 11px; color: #888; }
+.msg { max-width: 82%; padding: 8px 12px; border-radius: 14px; background: #fff; line-height: 1.38; }
+.msg.me { justify-self: end; background: #DCF3C8; }
+.kb { display: flex; flex-wrap: wrap; gap: 6px; }
+.kb span { flex: 1 1 auto; text-align: center; background: rgba(255, 255, 255, .7); border-radius: 10px; padding: 7px 10px; font-weight: 600; font-size: 12px; color: #2A5885; }
+.mini-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-width: 82%; }
+.mini-cards div { background: #fff; border-radius: 10px; overflow: hidden; font-size: 11px; }
+.mini-cards .t { aspect-ratio: 1.2; font-size: 10px; }
+.mini-cards p { padding: 6px 8px; font-weight: 600; }
+.bot-copy { display: grid; gap: 20px; }
+.bot-copy ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; counter-reset: s; }
+.bot-copy li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; counter-increment: s; }
+.bot-copy li::before { content: counter(s, decimal-leading-zero); font: 400 1.3rem/1.2 var(--f-display); color: var(--wine); }
+.bot-copy li b { display: block; font-weight: 600; }
+.bot-copy li span { color: var(--muted); font-size: .95rem; }
+@media (max-width: 860px) { .bot { grid-template-columns: 1fr; } .chat { justify-self: center; } }
+
+/* Path to order */
+.path { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.route { border-radius: var(--radius); padding: clamp(22px, 3vw, 32px); display: grid; gap: 18px; align-content: start; }
+.route--old { background: var(--paper); border: 1px solid var(--line); }
+.route--new { background: var(--vk-graphite); color: var(--vk-white); }
+.route .label { color: inherit; opacity: .7; }
+.route h3 { font: 400 clamp(2.4rem, 5vw, 3.6rem)/1 var(--f-display); }
+.route h3 small { font: 500 1rem/1 var(--f-body); opacity: .7; margin-left: 8px; }
+.route ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.route li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; font-size: .95rem; align-items: center; }
+.route li::before { content: attr(data-n); width: 26px; height: 26px; border-radius: 50%; border: 1px solid currentColor; display: grid; place-items: center; font-size: .75rem; opacity: .7; }
+.route--old li:nth-child(n+4) { color: var(--muted); }
+@media (max-width: 760px) { .path { grid-template-columns: 1fr; } }
+
+/* Numbers */
+.nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-on-wine); border-left: 1px solid var(--line-on-wine); }
+.num { padding: clamp(22px, 3vw, 34px); border-right: 1px solid var(--line-on-wine); border-bottom: 1px solid var(--line-on-wine); display: grid; gap: 10px; align-content: start; }
+.num b { font: 400 clamp(2.6rem, 5vw, 4rem)/1 var(--f-display); color: var(--on-wine); }
+.num b small { font-size: .5em; color: var(--on-wine-muted); }
+.num h3 { font: 600 1.02rem/1.3 var(--f-body); }
+.num p { font-size: .9rem; color: var(--on-wine-muted); }
+@media (max-width: 860px) { .nums { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .nums { grid-template-columns: 1fr; } }
+
+.kpi { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 24px 48px; align-items: start; }
+.kpi h3 { font: 400 var(--s-3)/1.2 var(--f-display); }
+.kpi ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; font-size: .95rem; color: var(--on-wine-muted); }
+.kpi li { padding-top: 10px; border-top: 1px solid var(--line-on-wine); }
+.kpi li b { color: var(--on-wine); font-weight: 600; display: block; }
+@media (max-width: 760px) { .kpi { grid-template-columns: 1fr; } .kpi ul { grid-template-columns: 1fr; } }
+
+/* Team + CTA */
+.team { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.team div { padding-top: 18px; border-top: 2px solid var(--wine); display: grid; gap: 8px; }
+.team h3 { font: 400 1.25rem/1.2 var(--f-display); color: var(--wine); }
+.team p { color: var(--muted); font-size: .95rem; }
+@media (max-width: 860px) { .team { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .team { grid-template-columns: 1fr; } }
+.final .wrap { display: grid; gap: 24px; }
+.final h2 { font-size: var(--s-1); max-width: 15ch; }
+.final h2 .script { color: var(--on-wine-muted); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0 28px; border-radius: 999px; font: 600 .95rem/1 var(--f-body); text-decoration: none; border: 1px solid transparent; transition: transform .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn--cream { background: var(--on-wine); color: var(--wine); }
+.btn--line { border-color: var(--on-wine); color: var(--on-wine); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+</style>
+</head>
+<body>
+
+<!-- Reusable shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sneaker" viewBox="0 0 220 100">
+      <path d="M10 70c0-12 6-19 17-21l38-7c11-2 19-10 25-19 5-7 13-10 20-5l11 9c7 6 15 9 26 11l40 8c18 4 25 13 25 24v6c0 5-4 9-10 9H20c-6 0-10-4-10-9z" fill="currentColor"/>
+      <path d="M10 76h200v4c0 5-4 9-10 9H20c-6 0-10-4-10-9z" fill="#F7F6F3" opacity=".92"/>
+      <path d="M96 30l14 10M88 38l14 10M80 45l14 9" stroke="#F7F6F3" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+      <path d="M140 52c14 2 30 4 42 10" stroke="#F7F6F3" stroke-width="3" fill="none" stroke-linecap="round" opacity=".5"/>
+    </symbol>
+    <symbol id="boot" viewBox="0 0 220 120">
+      <path d="M58 8h52c6 0 10 4 10 10v42c0 6 4 10 10 11l44 7c20 3 32 12 32 26v4c0 5-4 9-10 9H38c-6 0-10-4-10-9V88c0-10 6-17 16-20 6-2 10-7 10-13V18c0-6 4-10 10-10z" fill="currentColor"/>
+      <path d="M28 96h168v4c0 5-4 9-10 9H38c-6 0-10-4-10-9z" fill="#F7F6F3" opacity=".9"/>
+      <path d="M62 14h44" stroke="#F7F6F3" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+    </symbol>
+    <symbol id="clock" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M32 14v18l12 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="person" viewBox="0 0 60 140">
+      <rect x="3" y="3" width="54" height="134" rx="6" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" opacity=".7"/>
+      <rect x="20" y="58" width="20" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="30" cy="65.5" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M25 58l2-3h6l2 3" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text x="30" y="88" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="currentColor">образ</text>
+    </symbol>
+    <symbol id="play" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>Double</b><i>Tap</i></a>
+    <a class="back" href="cases.html">← Все кейсы</a>
+  </div>
+</header>
+
+<main>
+  <!-- COVER -->
+  <section class="cover">
+    <div class="wrap">
+      <div class="cover-copy">
+        <div class="chips"><span class="chip chip--fill">Концепт-редизайн</span><span class="chip">SMM</span><span class="chip">Айдентика</span><span class="chip">Сайт</span><span class="chip">Чат-бот</span></div>
+        <h1>Время кроссовок <span class="script">2.0</span></h1>
+        <p class="lead">Как мы переупаковали бы обувной магазин из Томска: от аватарки до кнопки «Забронировать примерку». Взгляд SMM-стратега, UX/UI-дизайнера, веб-дизайнера и дизайнера соцсетей на один бренд.</p>
+        <div class="facts">
+          <div><b>Обувь</b><span>магазин и доставка по России</span></div>
+          <div><b>Томск</b><span>2 точки продаж</span></div>
+          <div><b>3 626</b><span>подписчиков на старте</span></div>
+          <div><b>4 направления</b><span>соцсети, бренд, сайт, бот</span></div>
+        </div>
+        <p class="concept-note">Концепт агентства: показываем, как работаем с брендом целиком. Это не заказ бренда, а наше видение на основе открытых данных профиля и сайта на ноябрь 2026.</p>
+      </div>
+      <div class="cover-visual" data-photo="hero" aria-label="Пара кроссовок парит на сером фоне">
+        <div class="tag"><span>Drop 02</span><span>Зима 2026</span></div>
+        <svg class="float" style="color:var(--vk-choco)"><use href="#sneaker"/></svg>
+        <div class="shadow"></div>
+        <span class="hand hand--a">натуральная замша ↓</span>
+        <span class="hand hand--b">берите в размер</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT: 4 LENSES -->
+  <section class="band band--wine">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Точка А · аудит</p>
+        <h2>Четыре взгляда <span class="script">на один профиль</span></h2>
+        <p>Сильная база: живые образы, Reels, своя аудитория. Но путь от первого касания до покупки рвётся в нескольких местах.</p>
+      </div>
+      <div class="lenses">
+        <div class="lens"><p class="label">SMM-стратег</p><h3>Нет ответа «почему у вас»</h3>
+          <ul><li>Шапка продаёт цену «от 2 000 ₽», а не выгоду</li><li>Нет призыва к действию и понятного способа заказать</li><li>Вопросы о размере и наличии уходят в директ и ждут ответа</li></ul></div>
+        <div class="lens"><p class="label">Дизайнер соцсетей</p><h3>Лента без системы</h3>
+          <ul><li>Ярко-синий логотип спорит с тёплой лентой</li><li>Мемы и неоновые баннеры выбиваются из стиля</li><li>Обложки актуальных: «Обзор» повторяется дважды</li></ul></div>
+        <div class="lens"><p class="label">UX/UI-дизайнер</p><h3>Длинный путь к покупке</h3>
+          <ul><li>Ссылка «и ещё 3» заставляет выбирать</li><li>Из двух адресов виден один, и тот обрезан</li><li>Нет закрепов, которые знакомят нового подписчика</li></ul></div>
+        <div class="lens"><p class="label">Веб-дизайнер</p><h3>Сайт не продолжает профиль</h3>
+          <ul><li>На главной нет товаров, только оффер и контакты</li><li>Визуал сайта не связан с лентой</li><li>Чтобы узнать наличие, нужно писать менеджеру</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE BEFORE / AFTER -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Упаковка профиля</p>
+        <h2>Шапка, которая <span class="script">отвечает за вас</span></h2>
+        <p>Новый подписчик решает за три секунды. За это время он должен понять, что здесь продают, где примерить и как заказать.</p>
+      </div>
+      <div class="ba">
+        <div class="ba-col">
+          <p class="label">Было</p>
+          <div class="phone"><div class="scr">
+            <div class="ig-top">vremya.krossovok</div>
+            <div class="ig-head">
+              <div class="ava ava--old flag" data-n="1">ВРЕМЯ<br>кроссовок</div>
+              <div class="ig-stats"><div><b>357</b><span>публикации</span></div><div><b>3 626</b><span>подписчики</span></div><div><b>0</b><span>подписки</span></div></div>
+            </div>
+            <div class="ig-bio">
+              <span class="nm">КРОССОВКИ ТОМСК | ВРЕМЯ КРОССОВОК</span>
+              <span class="flag" data-n="2" style="width:fit-content">ЗИМНЯЯ ОБУВЬ ДЛЯ НЕЁ И ДЛЯ НЕГО ❄️ от 2.000₽</span>
+              <span>✈️ Доставка по РФ</span>
+              <span class="flag" data-n="3" style="width:fit-content">📍 пр. Ленина, 17… <span style="color:#888">ещё</span></span>
+              <a class="flag" data-n="4" style="width:fit-content">vremyakrossovok.ru и ещё 3</a>
+            </div>
+            <div class="ig-btns"><span class="p">Подписаться</span><span>Сообщение</span></div>
+            <div class="ig-hl ig-hl--old flag" data-n="5">
+              <div><i><svg style="color:#8a8378"><use href="#sneaker"/></svg></i>ДЛЯ НЕГО</div>
+              <div><i><svg style="color:#7d6a4f"><use href="#boot"/></svg></i>NEW</div>
+              <div><i><svg style="color:#b07a3e"><use href="#boot"/></svg></i>ОБЗОР</div>
+              <div><i><svg style="color:#7A2232"><use href="#sneaker"/></svg></i>ДЛЯ НЕЁ</div>
+              <div><i><svg style="color:#7A2232"><use href="#sneaker"/></svg></i>ОБЗОР</div>
+            </div>
+          </div></div>
+          <ol class="issues">
+            <li><b>1</b>Синий логотип не связан с лентой и выглядит как шаблон</li>
+            <li><b>2</b>Капс и «от 2 000 ₽»: продаём дешевизну, а не стиль</li>
+            <li><b>3</b>Второй адрес спрятан, первый обрезан</li>
+            <li><b>4</b>Четыре ссылки и ни одной главной</li>
+            <li><b>5</b>Нет «Как заказать», «Размеры», «Отзывы», «Адреса»</li>
+          </ol>
+        </div>
+        <div class="ba-col">
+          <p class="label">Стало</p>
+          <div class="phone"><div class="scr">
+            <div class="ig-top">vremya.krossovok</div>
+            <div class="ig-head">
+              <div class="ava ava--new"><svg style="width:46px;height:46px;color:var(--vk-white)"><use href="#clock"/></svg></div>
+              <div class="ig-stats"><div><b>357</b><span>публикации</span></div><div><b>3 626</b><span>подписчики</span></div><div><b>0</b><span>подписки</span></div></div>
+            </div>
+            <div class="ig-bio">
+              <span class="nm">Время кроссовок · обувь в Томске</span>
+              <span>Кроссовки и зимняя обувь для города</span>
+              <span>Примерка: Ленина, 17 и Беринга, 10</span>
+              <span>Доставка по всей России</span>
+              <span>↓ Подберём размер за минуту в Telegram</span>
+              <a>Подобрать пару в Telegram</a>
+            </div>
+            <div class="ig-btns ig-btns--new"><span class="p">Подписаться</span><span>Сообщение</span></div>
+            <div class="ig-hl ig-hl--new">
+              <div><i>как?</i>Заказ</div>
+              <div><i>38–45</i>Размеры</div>
+              <div><i>look</i>Образы</div>
+              <div><i>♥</i>Отзывы</div>
+              <div><i>📍</i>Адреса</div>
+            </div>
+          </div></div>
+          <ol class="issues fixes">
+            <li><b>1</b>Монохромный знак-часы в цветах ленты</li>
+            <li><b>2</b>Сначала что и для кого, цена уходит в карточки</li>
+            <li><b>3</b>Оба адреса видны без «ещё»</li>
+            <li><b>4</b>Одна ссылка: бот, который подбирает размер</li>
+            <li><b>5</b>Актуальные закрывают вопросы до директа</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEED -->
+  <section class="band band--paper">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Дизайн ленты</p>
+        <h2>Магазин, который выглядит <span class="script">как бренд</span></h2>
+        <p>Студийный серый, графит и шоколад, рукописные пометки и чёткий ритм: образ, пэкшот, Reels. Шесть форматов, каждый решает свою задачу продаж.</p>
+      </div>
+      <div class="feed-wrap">
+        <div class="feed-phone phone"><div class="scr">
+          <div class="ig-top">vremya.krossovok</div>
+          <div class="ig-grid" id="feed"></div>
+        </div></div>
+        <div class="formats" id="formats"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDENTITY -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Айдентика</p>
+        <h2>Часы остаются, <span class="script">шум уходит</span></h2>
+        <p>Сохраняем идею названия, но делаем знак монохромным, чтобы он работал на аватаре, коробке, пакете и в шапке сайта.</p>
+      </div>
+      <div class="idn">
+        <div class="logo-old"><p class="label">Было</p><div class="old-mark">ВРЕМЯ<br>кроссовок</div></div>
+        <div class="logo-new"><p class="label" style="color:var(--vk-graphite)">Стало</p>
+          <div class="new-mark"><svg><use href="#clock"/></svg><div class="wm">Время<br>кроссовок<span>Томск · обувь</span></div></div>
+        </div>
+        <div class="palette">
+          <div class="sw"><i style="background:var(--vk-white)"></i><b>Молоко</b>фон сайта и карточек</div>
+          <div class="sw"><i style="background:var(--vk-cement)"></i><b>Цемент</b>студийный фон съёмок</div>
+          <div class="sw"><i style="background:var(--vk-graphite)"></i><b>Графит</b>текст и кнопки</div>
+          <div class="sw"><i style="background:var(--vk-choco)"></i><b>Шоколад</b>зимние коллекции</div>
+          <div class="sw"><i style="background:var(--vk-wine)"></i><b>Бордо</b>акцент и пометки</div>
+        </div>
+        <div class="type">
+          <div><p class="label">Заголовки</p><span class="a">Drop 02</span></div>
+          <div><p class="label">Подписи</p><span class="b">Зима 2026 · Томск</span></div>
+          <div><p class="label">Пометки от руки</p><span class="c">берите в размер →</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEBSITE -->
+  <section class="band band--graphite">
+    <div class="wrap">
+      <div class="head">
+        <p class="label" style="color:var(--vk-cement-2)">Сайт</p>
+        <h2>Витрина, которая <span class="script">продолжает ленту</span></h2>
+        <p>Человек приходит из соцсетей и видит тот же стиль. Главная сразу показывает товары, а любой вопрос решается одной кнопкой в Telegram.</p>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>vremyakrossovok.ru</span></div>
+        <div class="site">
+          <div class="site-nav">
+            <div class="mini"><svg><use href="#clock"/></svg>Время кроссовок</div>
+            <nav><span>Каталог</span><span>Образы</span><span>Drop 02</span><span>Размеры</span><span>Адреса</span></nav>
+            <span class="tg">Подобрать размер</span>
+          </div>
+          <div class="site-hero">
+            <div>
+              <p class="eyebrow">Новое поступление · Drop 02</p>
+              <h3>Зима<br>2026</h3>
+              <p>Зимние кроссовки и ботинки для города. Примерка в двух магазинах Томска, доставка по России.</p>
+              <div class="btns"><span>Смотреть коллекцию</span><span>Как подобрать размер</span></div>
+            </div>
+            <div class="pic" data-photo="site-hero"><svg style="color:var(--vk-choco)"><use href="#boot"/></svg><span class="hw" style="top:4%;right:2%">мембрана ↓</span></div>
+          </div>
+          <div class="cats" id="cats"></div>
+        </div>
+      </div>
+
+      <div class="web-row">
+        <div class="notes">
+          <div><h4>Главная = витрина</h4><p>Сразу под первым экраном карточки товаров и подборки, а не только контакты.</p></div>
+          <div><h4>6 ракурсов в каждой карточке</h4><p>Сбоку, сверху, подошва, деталь, на ноге и в руках. Снимает страх «а как она вживую».</p></div>
+          <div><h4>Наличие в один тап</h4><p>Кнопка открывает бота с уже выбранной моделью и размером. Менеджер получает готовую заявку.</p></div>
+          <div><h4>Раздел «Образы»</h4><p>Готовые луки из ленты со ссылками на каждую пару. Помогает продать вторую вещь к паре.</p></div>
+          <div><h4>Размерная памятка</h4><p>Как измерить стопу и чем отличаются сетки брендов. Помогает избежать обменов из-за размера.</p></div>
+          <div><h4>Оба адреса и карта</h4><p>Примерка рядом: человек выбирает удобный магазин прямо на сайте.</p></div>
+        </div>
+        <div class="phone card-phone"><div class="scr">
+          <div class="pc">
+            <div class="t t--cement main" data-photo="angle-1"><svg class="sn" style="color:var(--vk-choco)"><use href="#sneaker"/></svg><span class="hw" style="top:10%;left:8%">замша</span></div>
+            <div class="thumbs">
+              <div class="t t--cement" data-photo="angle-1"><svg class="sn" style="color:var(--vk-choco)"><use href="#sneaker"/></svg></div>
+              <div class="t t--fog" data-photo="angle-2"><svg class="sn" style="color:var(--vk-choco);transform:scaleX(-1)"><use href="#sneaker"/></svg></div>
+              <div class="t t--cement" data-photo="angle-3"><svg class="sn" style="color:var(--vk-graphite);transform:rotate(180deg)"><use href="#sneaker"/></svg></div>
+              <div class="t t--choco" data-photo="angle-4"><svg class="sn" style="color:var(--vk-cement)"><use href="#sneaker"/></svg></div>
+              <div class="t t--fog" data-photo="angle-5"><svg class="sn" style="width:40%;color:var(--vk-graphite)"><use href="#person"/></svg></div>
+              <div class="t t--graphite" data-photo="angle-6"><svg class="sn" style="width:46%;color:var(--vk-white)"><use href="#play"/></svg></div>
+            </div>
+            <div class="info">
+              <h5>Кроссовки на мембране</h5>
+              <div class="sizes"><span>38</span><span>39</span><span class="on">40</span><span>41</span><span>42</span><span>43</span></div>
+              <span class="cta">Узнать наличие в Telegram</span>
+              <span class="sub"><u>Как подобрать размер</u> · примерка на Ленина, 17</span>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOT -->
+  <section class="band">
+    <div class="wrap bot">
+      <div class="phone chat"><div class="scr">
+        <div class="hdr"><i><svg style="color:#fff"><use href="#clock"/></svg></i><div><b>Время кроссовок</b><span>бот</span></div></div>
+        <div class="msg">Привет! Подберём пару за минуту. Для кого ищете?</div>
+        <div class="kb"><span>Для неё</span><span>Для него</span></div>
+        <div class="msg me">Для неё</div>
+        <div class="msg">Какая длина стопы в сантиметрах? Встаньте на лист бумаги, отметьте пятку и большой палец.</div>
+        <div class="msg me">24,5</div>
+        <div class="msg">Обычно это 38–39, но сетки брендов отличаются. Вот зимние пары вашего размера в наличии:</div>
+        <div class="mini-cards">
+          <div><div class="t t--cement" data-photo="pack-1"><svg class="sn" style="color:var(--vk-choco)"><use href="#boot"/></svg></div><p>Ботинки, 39</p></div>
+          <div><div class="t t--cement" data-photo="pack-2"><svg class="sn" style="color:var(--vk-wine)"><use href="#sneaker"/></svg></div><p>Кроссовки, 38</p></div>
+        </div>
+        <div class="kb"><span>Забронировать примерку</span><span>Доставка</span></div>
+      </div></div>
+      <div class="bot-copy">
+        <p class="label">Чат-бот</p>
+        <h2 style="font-size:var(--s-2);color:var(--wine)">Продавец, который <span class="script">не спит</span></h2>
+        <p style="color:var(--muted)">Самые частые вопросы в директ магазина обуви: «есть мой размер?» и «как не ошибиться с размером?». Бот отвечает на них сразу, в любое время.</p>
+        <ol>
+          <li><div><b>Подбирает размер по длине стопы</b><span>и учитывает, что сетки брендов отличаются</span></div></li>
+          <li><div><b>Показывает пары в наличии</b><span>только нужного размера, без «уточню и напишу»</span></div></li>
+          <li><div><b>Бронирует примерку</b><span>в одном из двух магазинов, с напоминанием</span></div></li>
+          <li><div><b>Передаёт готовую заявку</b><span>менеджер видит модель, размер, адрес и контакт</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATH TO ORDER -->
+  <section class="band band--paper">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Путь к покупке</p>
+        <h2>Вдвое короче <span class="script">до заказа</span></h2>
+        <p>Считаем действия, которые человек делает от профиля в Instagram до заявки на конкретную пару.</p>
+      </div>
+      <div class="path">
+        <div class="route route--old">
+          <p class="label">Сейчас</p>
+          <h3>6 <small>шагов</small></h3>
+          <ol>
+            <li data-n="1">Открыть ссылку «и ещё 3»</li>
+            <li data-n="2">Выбрать, куда перейти</li>
+            <li data-n="3">Попасть на главную без товаров</li>
+            <li data-n="4">Найти нужную модель</li>
+            <li data-n="5">Написать менеджеру о размере и наличии</li>
+            <li data-n="6">Дождаться ответа и договориться</li>
+          </ol>
+        </div>
+        <div class="route route--new">
+          <p class="label">После редизайна</p>
+          <h3>3 <small>шага</small></h3>
+          <ol>
+            <li data-n="1">Нажать «Подобрать размер» в шапке</li>
+            <li data-n="2">Ответить боту на два вопроса</li>
+            <li data-n="3">Забронировать примерку или доставку</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="band band--wine">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Что даёт редизайн</p>
+        <h2>Изменения <span class="script">в цифрах</span></h2>
+      </div>
+      <div class="nums">
+        <div class="num"><b>−50%</b><h3>шагов до заказа</h3><p>С шести действий до трёх: от профиля сразу к боту.</p></div>
+        <div class="num"><b>5 <small>из 5</small></b><h3>частых вопросов закрыты</h3><p>Размер, наличие, доставка, адреса и как заказать. До директа.</p></div>
+        <div class="num"><b>24/7</b><h3>ответ о размере и наличии</h3><p>Бот отвечает ночью и в выходные, когда менеджер не на связи.</p></div>
+        <div class="num"><b>×6</b><h3>ракурсов на модель</h3><p>Вместо одного фото: сбоку, сверху, подошва, деталь, на ноге, в руках.</p></div>
+        <div class="num"><b>6</b><h3>форматов контента</h3><p>У каждого своя задача: охват, доверие, продажа, повторная покупка.</p></div>
+        <div class="num"><b>2 <small>из 2</small></b><h3>адреса видны сразу</h3><p>В шапке, в актуальных, на сайте и в боте.</p></div>
+      </div>
+      <div class="kpi">
+        <h3>За чем следим после запуска</h3>
+        <ul>
+          <li><b>Заявки из бота и директа</b>сколько обращений приходит в неделю</li>
+          <li><b>Стоимость заявки</b>рекламный бюджет / заявки</li>
+          <li><b>Переходы из профиля</b>клики по ссылке в шапке</li>
+          <li><b>Конверсия в примерку</b>брони / заявки × 100%</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Кто работал над концептом</p>
+        <h2>Одна команда, <span class="script">четыре взгляда</span></h2>
+      </div>
+      <div class="team">
+        <div><h3>Стратегия и SMM</h3><p>Позиционирование, шапка, актуальные, рубрики и контент-план.</p></div>
+        <div><h3>Дизайн соцсетей</h3><p>Сетка ленты, шаблоны, обложки и шесть форматов контента.</p></div>
+        <div><h3>UX/UI</h3><p>Путь от профиля до заказа, сценарий бота, карточка товара.</p></div>
+        <div><h3>Веб и айдентика</h3><p>Знак, палитра, типографика и концепт сайта-витрины.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--wine final">
+    <div class="wrap">
+      <h2>Хотите так же <span class="script">для своего бренда?</span></h2>
+      <p style="color:var(--on-wine-muted);max-width:52ch">Начнём с бесплатного аудита: покажем, где ваш профиль и сайт теряют покупателей.</p>
+      <div class="cta-row">
+        <a class="btn btn--cream" href="contact.html">Получить бесплатный аудит</a>
+        <a class="btn btn--line" href="cases.html">Смотреть другие кейсы</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const S = (id, color, extra = "") => `<svg class="sn" style="color:${color};${extra}"><use href="#${id}"/></svg>`;
+const C = { choco: "var(--vk-choco)", graph: "var(--vk-graphite)", wine: "var(--vk-wine)", cem: "var(--vk-cement)", white: "var(--vk-white)" };
+
+// Six formats: tile markup + description
+const FORMATS = [
+  { tile: `<div class="t t--choco" data-photo="look-1"><svg class="person" style="color:var(--vk-cement)"><use href="#person"/></svg><div class="clip" data-photo="pack-1">${S("boot", C.choco)}</div><span class="hw" style="top:12%;right:10%">в образе ↓</span></div>`,
+    h: "Образ + карточка", p: "Человек в образе, в углу пэкшот пары на «скрепке» и стрелка от руки.", why: "Продаёт: видно и стиль, и модель" },
+  { tile: `<div class="t t--fog"><div class="six">${[0,1,2,3,4,5].map(i => `<span data-photo="angle-${i + 1}">${S(i % 2 ? "boot" : "sneaker", i > 3 ? C.wine : C.choco, i === 2 ? "transform:scaleX(-1)" : i === 3 ? "transform:rotate(180deg)" : "")}</span>`).join("")}</div></div>`,
+    h: "6 ракурсов", p: "Карусель-паспорт модели: сбоку, сверху, подошва, деталь, на ноге, в руках.", why: "Снимает страх онлайн-покупки" },
+  { tile: `<div class="t t--cement" data-photo="float-1">${S("sneaker", C.choco, "width:64%")}<span class="cap">Пэкшот · парение</span></div>`,
+    h: "Пара в воздухе", p: "Студийный серый фон и мягкая тень снизу. Единый стиль для всего ассортимента.", why: "Поднимает уровень визуала магазина" },
+  { tile: `<div class="t t--fog" data-photo="collection"><div class="row">${["01","02","03","04","05","06"].map((n, i) => `<div>${n}.${S(i % 3 === 1 ? "boot" : "sneaker", [C.choco, C.graph, C.wine][i % 3])}</div>`).join("")}</div></div>`,
+    h: "Коллекция 01–06", p: "Шесть моделей поступления с номерами и названиями, как в лукбуке бренда.", why: "Анонс поступлений без баннеров" },
+  { tile: `<div class="t t--wine" data-photo="drop"><span class="big">Drop<br>02</span><span class="hw" style="bottom:12%;right:10%">зима 2026</span><span class="hw" style="top:12%;left:10%">○ new</span></div>`,
+    h: "Постер дропа", p: "Крупный гротеск, зерно и рукописные пометки. Обложки Reels и анонсы.", why: "Создаёт событие вокруг поступления" },
+  { tile: `<div class="t t--cement" data-photo="detail">${S("boot", C.choco, "width:58%")}<span class="hw" style="top:14%;left:8%">мембрана</span><span class="hw" style="bottom:14%;right:8%">не скользит</span><span class="hw" style="top:14%;right:8%">+1 размер?</span></div>`,
+    h: "Аннотированная пара", p: "Выноски от руки: материал, подошва, как сидит. Ответы на вопросы прямо на фото.", why: "Меньше вопросов в директ" }
+];
+document.getElementById("formats").innerHTML = FORMATS.map(f => `<article class="fmt">${f.tile}<div class="txt"><h3>${f.h}</h3><p>${f.p}</p><span class="why">${f.why}</span></div></article>`).join("");
+
+// Feed grid: rhythm look / packshot / reels
+const PLAY = `<svg class="play" style="color:currentColor"><use href="#play"/></svg>`;
+const FEED = [
+  `<div class="t t--wine" data-photo="drop" style="font-size:13px"><span class="big">Drop<br>02</span>${PLAY}</div>`,
+  `<div class="t t--cement" data-photo="float-1">${S("sneaker", C.choco)}</div>`,
+  `<div class="t t--choco" data-photo="look-1"><svg class="person" style="color:var(--vk-cement)"><use href="#person"/></svg><div class="clip" data-photo="pack-1">${S("boot", C.choco)}</div></div>`,
+  `<div class="t t--fog" style="font-size:9px"><div class="six">${[0,1,2,3,4,5].map(i => `<span data-photo="angle-${i + 1}">${S("sneaker", C.graph, i === 3 ? "transform:rotate(180deg)" : "")}</span>`).join("")}</div></div>`,
+  `<div class="t t--graphite" data-photo="look-2"><svg class="person" style="color:var(--vk-cement-2)"><use href="#person"/></svg>${PLAY}</div>`,
+  `<div class="t t--cement" data-photo="detail">${S("boot", C.choco, "width:62%")}<span class="hw" style="top:12%;left:8%;font-size:13px">мембрана</span></div>`,
+  `<div class="t t--cement" data-photo="look-3"><svg class="person" style="color:var(--vk-graphite)"><use href="#person"/></svg><div class="clip" data-photo="pack-2">${S("sneaker", C.wine)}</div></div>`,
+  `<div class="t t--choco" data-photo="reels-1">${S("sneaker", C.cem)}${PLAY}</div>`,
+  `<div class="t t--fog" data-photo="collection" style="font-size:8px"><div class="row">${[0,1,2,3,4,5].map(i => `<div>0${i+1}.${S("sneaker", [C.choco, C.graph, C.wine][i % 3])}</div>`).join("")}</div></div>`
+];
+document.getElementById("feed").innerHTML = FEED.join("");
+
+// Website categories
+const CATS = [
+  ["Зимние ботинки", "boot", C.choco, "t--cement"], ["Кроссовки на мембране", "sneaker", C.graph, "t--fog"],
+  ["Для неё", "sneaker", C.wine, "t--cement"], ["Для него", "boot", C.graph, "t--fog"]
+];
+document.getElementById("cats").innerHTML = CATS.map(([n, s, c, bg], i) => `<div class="cat"><div class="t ${bg}" data-photo="cat-${i + 1}">${S(s, c)}</div><b>${n}</b><span>Узнать наличие →</span></div>`).join("");
+
+// Photos: drop files into img-vk/ named as in data-photo (hero.jpg, look-1.jpg…). Missing ones keep the drawn placeholder.
+const PHOTO_DIR = "img-vk/";
+document.querySelectorAll("[data-photo]").forEach(el => {
+  const src = PHOTO_DIR + el.dataset.photo + ".jpg", im = new Image();
+  im.onload = () => { el.style.backgroundImage = `url("${src}")`; el.classList.add("has-photo"); };
+  im.src = src;
+});
+</script>
+</body>
+</html>
