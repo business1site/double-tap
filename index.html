@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Double Tap Agency</title>
-<meta name="description" content="Маркетинговое агентство полного цикла: стратегия, айдентика, SMM со съёмкой, сайты и чат-боты.">
-</head>
-<body>
-<title>Double Tap Agency</title>
+<title>Double Tap — SMM, контент и брендинг для бизнеса</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Маркетинговое агентство полного цикла в Москве: стратегия, айдентика, SMM с выездной съёмкой, сайты и чат-боты.">
+<meta name="description" content="Креативное SMM-агентство Double Tap. Стратегия, съёмки, визуальная упаковка, сайты и digital-решения. Кейсы, подход и сотрудничество.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Double Tap">
+<meta property="og:title" content="Double Tap — SMM, контент и брендинг для бизнеса">
+<meta property="og:description" content="Креативное SMM-агентство Double Tap. Стратегия, съёмки, визуальная упаковка, сайты и digital-решения. Кейсы, подход и сотрудничество.">
+<meta property="og:image" content="img-reel-c-nb.jpg">
+<meta property="og:locale" content="ru_RU">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600&display=swap">
@@ -466,7 +468,7 @@ main { padding-bottom: var(--fw); }
 .frame-win { position: absolute; inset: var(--ft, var(--fw)) var(--fw) var(--fb, 0px); border-radius: var(--rt, 28px) var(--rt, 28px) var(--rb, 0px) var(--rb, 0px);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .55), 0 0 0 2px rgba(94, 70, 54, .25), 0 0 30px rgba(69, 51, 42, .25); }
 
-/* ===== Blurred warm photo backgrounds (AI set in img-bg) ===== */
+/* ===== Blurred warm photo backgrounds (AI set in img/bg) ===== */
 .hero, .band { position: relative; isolation: isolate; overflow: clip; }
 .hero::after, .band::after { content: ""; position: absolute; inset: calc(var(--blur, 28px) * -3); z-index: -1; pointer-events: none;
   background: var(--bg-photo, none) center / cover; filter: blur(var(--blur, 28px)) saturate(1.1); opacity: var(--bg-op, .55); }
@@ -1198,14 +1200,224 @@ body { background: var(--grey); }
 .likes svg { fill: #E0566B; }
 .heart svg { fill: #fff; }
 
+/* ==========================================================
+   TZ 2.0 blocks
+   ========================================================== */
+.eyebrow { margin: 0 0 14px; font: 600 .76rem/1.2 var(--f-body); letter-spacing: .14em; text-transform: uppercase; color: var(--pink-ink); }
+.band--wine .eyebrow, .final .eyebrow, .trust .eyebrow, .reel-copy .eyebrow, .page-head .eyebrow { color: var(--pink); }
+.page-head .eyebrow { margin-top: 18px; }
+.head .eyebrow { margin-bottom: 10px; }
+.sec-more { display: flex; justify-content: center; margin-top: clamp(28px, 4vw, 44px); }
+.fine { font-size: .85rem; color: var(--muted); }
+.final .fine, .band--wine .fine { color: var(--on-wine-muted); }
+
+/* hero */
+.hero-eyebrow { margin: clamp(18px, 3vw, 36px) 0 0; text-align: center; font: 600 .78rem/1.2 var(--f-body); letter-spacing: .2em; text-transform: uppercase; color: rgba(252,250,250,.6); }
+.hero--dark .hero-title { margin-top: clamp(8px, 1.4vw, 18px); }
+.reel-copy h1.hero-offer { margin: 0; font-size: clamp(1.7rem, 3vw, 2.6rem); }
+.reel-copy .hero-offer .script { display: block; margin-top: .12em; color: var(--pink); font-size: 1.25em; }
+.reel-copy .lead--s { font-size: .95rem; opacity: .85; }
+.hero-line { font: 600 .72rem/1.4 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: rgba(252,250,250,.55); }
+.reel-note { position: absolute; right: 16px; bottom: 12px; margin: 0; font-size: .72rem; color: rgba(252,250,250,.55); z-index: 2; }
+@media (max-width: 760px) { .reel-note { position: static; padding: 0 20px 16px; } }
+
+/* KPI */
+.trust--kpi .wrap { display: block; }
+.kpi-head { max-width: 900px; margin-bottom: clamp(26px, 3.4vw, 40px); }
+.trust--kpi .cap { color: var(--milk); }
+.trust--kpi .sub { color: rgba(252,250,250,.66); max-width: 60ch; margin-top: 14px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.kpi { display: grid; gap: 8px; align-content: start; padding: 22px; border-radius: var(--r-card); border: 1px solid rgba(252,250,250,.12); text-decoration: none; color: inherit; transition: background .25s, border-color .25s; }
+.kpi:hover, .kpi:focus-visible { background: rgba(252,250,250,.05); border-color: var(--pink); }
+.trust--kpi .kpi b { display: block; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1; }
+.trust--kpi .kpi span { margin: 0; max-width: none; color: rgba(252,250,250,.75); }
+.kpi em { font-style: normal; font-size: .82rem; color: var(--pink); }
+.kpi em::after { content: " →"; }
+.kpi-note { margin-top: 18px; font-size: .82rem; color: var(--muted); max-width: 80ch; }
+.trust .kpi-note { color: rgba(252,250,250,.5); }
+@media (max-width: 900px) { .kpi-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .kpi-grid { grid-template-columns: 1fr; } }
+
+/* pains */
+.band--pains .pains-title { white-space: normal; max-width: 22ch; }
+.pains-sub { color: rgba(252,250,250,.66); max-width: 62ch; margin: 16px 0 clamp(26px, 3.4vw, 40px); }
+.pains-final { margin-top: clamp(24px, 3vw, 36px); max-width: 60ch; font: 600 clamp(1.05rem, 1.6vw, 1.3rem)/1.4 var(--f-body); color: var(--pink); }
+
+/* method: two taps */
+.taps { display: grid; grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr); align-items: stretch; margin-top: 28px; }
+.tap { display: grid; gap: 14px; align-content: start; padding: clamp(24px, 3vw, 40px); border-radius: var(--r-card); }
+.tap--first { background: var(--grey); }
+.tap--second { background: var(--g-800); color: var(--milk); }
+.tap-n { font: 600 .78rem/1 var(--f-body); letter-spacing: .14em; text-transform: uppercase; color: var(--pink-ink); }
+.tap--second .tap-n { color: var(--pink); }
+.tap h3 { font: 600 clamp(1.5rem, 2.6vw, 2.2rem)/1.1 var(--f-head); letter-spacing: -.04em; }
+.tap p { color: var(--muted); }
+.tap--second p { color: rgba(252,250,250,.72); }
+.tap .tap-tags { font-size: .85rem; color: var(--ink); padding-top: 14px; border-top: 1px solid var(--line); }
+.tap--second .tap-tags { color: var(--pink); border-color: rgba(252,250,250,.14); }
+.tap-link { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 6px; }
+.tap-link span { height: 1px; background: var(--pink-ink); }
+.tap-link svg { width: 28px; height: 28px; fill: var(--pink-ink); }
+.taps-final { margin-top: 24px; text-align: center; font: 600 clamp(1rem, 1.5vw, 1.2rem)/1.4 var(--f-body); }
+@media (max-width: 760px) { .taps { grid-template-columns: 1fr; grid-template-rows: auto 48px auto; } .tap-link { grid-template-columns: 1fr; justify-items: center; } .tap-link span { width: 1px; height: 12px; } }
+
+/* home services */
+.svc-grid--tz { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.svc-grid--tz .svc { grid-column: span 2; grid-template-rows: auto auto 1fr auto auto; }
+.svc-grid--tz .svc--main, .svc-grid--tz .svc--second { grid-column: span 3; }
+.svc-grid--tz .svc .n { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.svc-p { color: var(--muted); font-size: .96rem; }
+.svc--main .svc-p { color: rgba(252,250,250,.72); }
+.svc-tags { font-size: .82rem; color: var(--ink); padding-top: 12px; border-top: 1px solid var(--line); }
+.svc--main .svc-tags { color: var(--pink); border-color: rgba(252,250,250,.14); }
+.svc .more { font-weight: 600; font-size: .9rem; color: var(--pink-ink); }
+.svc--main .more { color: var(--pink); }
+.svc--second { background: var(--milk); }
+@media (max-width: 960px) { .svc-grid--tz { grid-template-columns: 1fr 1fr; } .svc-grid--tz .svc, .svc-grid--tz .svc--main, .svc-grid--tz .svc--second { grid-column: span 1; } .svc-grid--tz .svc--main { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .svc-grid--tz { grid-template-columns: 1fr; } }
+
+/* case cards */
+.cards--real { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cards--lab { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 960px) { .cards--lab { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { .cards--real, .cards--lab { grid-template-columns: 1fr; } }
+.ccard .ctitle { font: 600 1.02rem/1.35 var(--f-body); color: var(--ink); }
+.ccard .res--3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 14px; }
+.ccard .badge--real { background: var(--pink); color: var(--g-800); }
+.ccard--lab .badge { background: var(--milk); color: var(--g-800); border: 1px solid var(--line); }
+.facts-line { padding-top: 12px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--ink); }
+.facts-line--big { border: 0; padding: 0; font: 600 clamp(1.1rem, 2vw, 1.5rem)/1.5 var(--f-body); color: var(--milk); max-width: 60ch; }
+.lab-note { display: inline-block; margin-top: 14px; padding: 10px 14px; border-radius: 12px; border: 1px dashed var(--pink-ink); font-size: .85rem; color: var(--ink); max-width: 70ch; }
+.page-head .lab-note { color: var(--milk); border-color: var(--pink); }
+.lab-note--dark { color: rgba(252,250,250,.8); border-color: var(--pink); margin-top: 22px; }
+
+/* why */
+.why { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
+.why-i { display: grid; gap: 12px; align-content: start; padding: 24px; border-radius: var(--r-card); border: 1px solid rgba(252,250,250,.12); }
+.why-i .n { font: 600 .9rem/1 var(--f-head); color: var(--pink); }
+.why-i h3 { font: 600 1.1rem/1.25 var(--f-head); letter-spacing: -.03em; color: var(--milk); }
+.why-i p { color: rgba(252,250,250,.68); font-size: .95rem; }
+@media (max-width: 960px) { .why { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .why { grid-template-columns: 1fr; } }
+
+/* process */
+.process .n { font: 600 .78rem/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase; color: var(--pink-ink); }
+.process li { border-top-color: var(--g-800); }
+.process .out { color: var(--ink); font-weight: 600; font-size: .9rem; }
+
+/* final */
+.get-list { margin: 18px 0 22px; padding: 0; list-style: none; display: grid; gap: 10px; }
+.get-list li { position: relative; padding-left: 22px; color: var(--milk); }
+.get-list li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--pink); }
+
+/* services page */
+.dirs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.dir { grid-column: span 2; display: grid; gap: 12px; align-content: start; padding: 28px; border-radius: var(--r-card); background: var(--milk); scroll-margin-top: 90px; }
+.dir--main, .dir--second { grid-column: span 3; }
+.dir--main { background: var(--g-800); color: var(--milk); }
+.dir-n { font: 600 .76rem/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase; color: var(--pink-ink); }
+.dir--main .dir-n { color: var(--pink); }
+.dir h3 { font: 600 clamp(1.15rem, 1.6vw, 1.45rem)/1.2 var(--f-head); letter-spacing: -.035em; }
+.dir > p { color: var(--muted); }
+.dir--main > p { color: rgba(252,250,250,.72); }
+.dir--main .svc-tags { color: var(--pink); border-color: rgba(252,250,250,.14); }
+.dir-for { font-size: .88rem; }
+.dir-for b { display: block; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pink-ink); margin-bottom: 4px; }
+.dir--main .dir-for b { color: var(--pink); }
+.dir .more { font-weight: 600; color: var(--pink-ink); text-decoration: none; }
+.dir--main .more { color: var(--pink); }
+@media (max-width: 960px) { .dirs { grid-template-columns: 1fr 1fr; } .dir, .dir--main, .dir--second { grid-column: span 1; } .dir--main { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .dirs { grid-template-columns: 1fr; } }
+.plan { display: grid; gap: 14px; align-content: start; }
+.plan .plan-p { color: var(--muted); }
+.plan--main .plan-p { color: rgba(252,250,250,.72); }
+.plan .btn { justify-self: start; margin-top: 6px; }
+.metrics--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 860px) { .metrics--4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .metrics--4 { grid-template-columns: 1fr; } }
+
+/* cases tabs */
+.tabs { display: inline-flex; gap: 6px; padding: 6px; border-radius: 999px; background: var(--grey); margin-bottom: 18px; flex-wrap: wrap; }
+.tabs [role=tab] { border: 0; cursor: pointer; padding: 12px 20px; border-radius: 999px; background: transparent; font: 600 .92rem/1 var(--f-body); color: var(--ink); }
+.tabs [role=tab][aria-selected=true] { background: var(--g-800); color: var(--milk); }
+.tabs [role=tab]:focus-visible { outline: 2px solid var(--pink-ink); outline-offset: 2px; }
+.tab-desc { color: var(--muted); max-width: 62ch; margin-bottom: 22px; }
+.tabpanel .lab-note { margin: -8px 0 22px; }
+
+/* about */
+.person .bio { display: block; margin-top: 10px; font-size: .9rem; color: rgba(252,250,250,.7); max-width: 34ch; }
+.cta-band p small { display: block; margin-top: 8px; font: 400 .95rem/1.45 var(--f-body); color: var(--on-wine-muted); }
+.founders-copy .eyebrow { margin-bottom: 12px; }
+
+/* quiz */
+.q-step { font: 600 .76rem/1 var(--f-body); letter-spacing: .12em; text-transform: uppercase; color: var(--pink-ink); margin: 14px 0 6px; }
+.q-sub { display: block; margin-top: 8px; font: 400 .92rem/1.4 var(--f-body); color: var(--muted); letter-spacing: 0; }
+.q--sub { margin-top: 20px; border: 0; padding: 0; }
+.q--sub legend { font-size: 1rem; margin-bottom: 10px; }
+.opt-l { font-weight: 400; color: var(--muted); }
+.field textarea { width: 100%; font: inherit; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: #fff; resize: vertical; min-height: 110px; }
+.field small { display: block; margin-top: 6px; font-size: .8rem; color: var(--muted); }
+.ferr { display: block; min-height: 0; font-size: .82rem; color: #B3261E; margin-top: 6px; }
+.ferr:empty { display: none; }
+[aria-invalid=true] { border-color: #B3261E !important; }
+.agree { display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; font-size: .85rem; color: var(--muted); cursor: pointer; }
+.agree input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--g-800); flex: none; }
+.agree a { color: var(--ink); }
+
+/* case pages */
+.facts4--head { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 28px 0 0; padding: 22px 0 0; border-top: 1px solid rgba(252,250,250,.14); border-bottom: 0; max-width: 900px; }
+.page-head .facts4 b { color: var(--pink); }
+.page-head .facts4 span { color: rgba(252,250,250,.7); }
+.kcap { font-size: .8rem; color: rgba(252,250,250,.5) !important; margin-top: 10px; }
+.ti { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); }
+.ti p { color: var(--muted); margin-top: 14px; max-width: 58ch; }
+.ti-ins { padding: clamp(22px, 3vw, 36px); border-radius: var(--r-card); background: var(--grey); }
+.ti--head { margin-top: 32px; }
+.page-head .ti p { color: rgba(252,250,250,.72); }
+.page-head .ti .cap { color: var(--milk); }
+@media (max-width: 760px) { .ti, .facts4--head { grid-template-columns: 1fr; } }
+.facts4--res { grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 0; }
+.facts4--res em { display: block; font-style: normal; font-size: .8rem; color: var(--pink-ink); margin-top: 4px; }
+@media (max-width: 600px) { .facts4--res { grid-template-columns: 1fr; } }
+.lbl--ai { background: var(--pink) !important; color: var(--g-800) !important; }
+.case-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 28px; }
+.case-nav a { font-weight: 600; color: var(--ink); text-decoration: none; }
+.case-nav a:hover { color: var(--pink-ink); }
+.case-nav--dark a { color: var(--milk); }
+.legal { max-width: 760px; }
+.legal h2 { font: 600 1.15rem/1.3 var(--f-head); margin: 28px 0 10px; }
+.legal p { color: var(--muted); }
+.site-foot .copy a { color: inherit; }
+
+/* mobile menu */
+.burger { display: none; align-items: center; gap: 8px; border: 1px solid rgba(252,250,250,.2); background: transparent; color: var(--milk); border-radius: 999px; padding: 9px 14px; cursor: pointer; font: 600 .85rem/1 var(--f-body); }
+.burger span { display: block; width: 16px; height: 1.5px; background: currentColor; box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor; margin: 0 2px; }
+.burger span + span { display: none; }
+@media (max-width: 900px) {
+  .burger { display: inline-flex; }
+  .top .wrap { flex-wrap: nowrap; position: relative; }
+  .top .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; width: auto; padding: 8px 16px 16px; background: var(--g-800); border-bottom: 1px solid rgba(252,250,250,.1); overflow: visible; }
+  .top .nav.open { display: flex; }
+  .top .nav a { padding: 14px 4px; font-size: 1rem; border-bottom: 1px solid rgba(252,250,250,.08); }
+  .top .nav .nav-cta { margin-top: 12px; text-align: center; justify-content: center; border-radius: 999px; border: 0; align-self: stretch; }
+}
+.final .cap { font-size: clamp(2rem, 4.2vw, 3.6rem); }
+.page-head h1 { font-size: clamp(1.9rem, 4.6vw, 4.2rem); max-width: 24ch; line-height: 1.05; }
+.pains--cards .pain p { max-width: none; }
+.band--pains .pains-final { color: var(--pink); }
+html { scroll-padding-top: 84px; }
+
 main { padding-bottom: 0; }
 .site-foot { padding-bottom: calc(clamp(28px, 4vw, 40px) + var(--fw)); }
 </style>
 
+</head>
+<body>
 <header class="top">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Double Tap, на главную"><b>Double</b><i>Tap</i></a>
-    <nav class="nav" aria-label="Разделы"><a href="index.html" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="cases.html">Кейсы</a><a href="about.html">О нас</a><a href="contact.html" class="nav-cta">Связаться</a></nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><b>Меню</b></button>
+    <nav class="nav" id="siteNav" aria-label="Разделы"><a href="index.html" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="cases.html">Кейсы</a><a href="about.html">О нас</a><a href="contact.html">Контакты</a><a href="contact.html#audit" class="nav-cta" data-ev="nav_cta_click">Обсудить проект</a></nav>
   </div>
 </header>
 
@@ -1213,7 +1425,8 @@ main { padding-bottom: 0; }
   <!-- HERO -->
   <section class="hero hero--dark" style="--bg-photo:none">
     <div class="wrap">
-      <h1 class="hero-title">SMM-агентство</h1>
+      <p class="hero-eyebrow">Double Tap / Creative &amp; SMM agency</p>
+      <p class="hero-title">SMM-агентство</p>
     </div>
   </section>
 
@@ -1232,36 +1445,65 @@ main { padding-bottom: 0; }
           </div>
         </div>
         <div class="reel-copy">
-          <p class="hero-offer">Бренд, соцсети и сайт, <span class="script">которые <em class="accent">продают</em></span></p>
-          <p class="lead">Стратегия, айдентика, SMM с выездной съёмкой, сайты и чат-боты одной командой.</p>
+          <h1 class="hero-offer">Привлекаем <em class="accent">внимание.</em> <span class="script">Превращаем его в действие</span></h1>
+          <p class="lead">Мы создаём стратегии, визуальные истории и контент, которые помогают брендам выделяться, находить свою аудиторию и превращать интерес в осмысленные действия.</p>
+          <p class="lead lead--s">SMM, съёмки, брендинг и digital-решения — в одной команде и с единым взглядом на развитие бизнеса.</p>
           <div class="cta-row">
-            <a class="btn btn--cream" href="contact.html">Получить аудит</a>
-            <span class="hand-note"><svg viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M62 12.5C44 11 24 12.5 4 12"/><path d="M12 4L4 12l8 8"/></svg>бесплатно</span>
+            <a class="btn btn--cream" href="cases.html#real" data-ev="hero_cases_click">Смотреть наши кейсы</a>
+            <a class="btn btn--line-cream" href="contact.html#audit" data-ev="hero_contact_click">Обсудить мой бренд</a>
           </div>
-          <a class="btn btn--line-cream tg-link" href="https://t.me/double_tappp" target="_blank" rel="noopener">Написать в Telegram</a>
+          <p class="hero-line">Стратегия / SMM / Контент / Брендинг / Digital</p>
         </div>
+        <p class="reel-note">В ленте: кадры наших проектов и подписанные визуализации концептов</p>
       </div>
     </div>
   </section>
-  <!-- TRUST -->
-  <section class="trust" aria-label="Коротко о нас">
+  <!-- RESULTS / KPI -->
+  <section class="trust trust--kpi" aria-labelledby="kpi-h">
     <div class="wrap">
-      <div><b>6+</b><span>направлений в одной команде</span></div>
-      <div><b>180+</b><span>заявок в директ за 3 месяца</span></div>
-      <div><b>18%</b><span>вовлечённость, в несколько раз выше обычной</span></div>
-      <div><b>100%</b><span>проектов основатели ведут лично</span></div>
+      <div class="kpi-head">
+        <p class="eyebrow">Результаты</p>
+        <h2 class="cap" id="kpi-h">Креатив привлекает внимание. <i class="w">Цифры</i> помогают оценить результат</h2>
+        <p class="sub">Мы показываем не только то, как выглядит проект, но и какие измеримые изменения зафиксированы в процессе работы.</p>
+      </div>
+      <div class="kpi-grid">
+        <a class="kpi" href="case-krossovki.html#results" data-ev="case_open" data-case="krossovki"><b>120+</b><span>обращений в директ за 3 месяца</span><em>«Время кроссовок»</em></a>
+        <a class="kpi" href="case-krossovki.html#results" data-ev="case_open" data-case="krossovki"><b>+1 500</b><span>подписчиков за 3 месяца</span><em>«Время кроссовок»</em></a>
+        <a class="kpi" href="case-bublik.html#results" data-ev="case_open" data-case="bublik"><b>18%</b><span>вовлечённость аккаунта (ER по подписчикам)</span><em>«Бублик»</em></a>
+        <a class="kpi" href="case-bublik.html#results" data-ev="case_open" data-case="bublik"><b>34</b><span>покупателя из соцсетей за месяц</span><em>«Бублик»</em></a>
+      </div>
+      <p class="kpi-note">Показатели взяты из материалов проектов. Для каждой метрики в подробном кейсе указан период и метод расчёта.</p>
     </div>
   </section>
   <!-- PAINS -->
   <section class="band band--pains" style="--bg-photo:none">
     <div class="wrap">
-      <h2 class="cap pains-title">Где теряются <i class="w w--xl">клиенты</i></h2>
+      <p class="eyebrow">Понимаем задачу</p>
+      <h2 class="cap pains-title">Ваш продукт может быть сильнее, чем кажется по его <i class="w">соцсетям</i></h2>
+      <p class="sub pains-sub">Качественный продукт — основа бизнеса. Но чтобы его заметили и выбрали, нужна коммуникация, которая передаёт ценность бренда и помогает человеку сделать следующий шаг.</p>
       <div class="pains pains--cards">
-        <div class="pain"><span class="n">01</span><h3>Соцсети ведутся, а продаж нет</h3><p>Посты выходят по графику, но в директ не пишут. Контент не ведёт к покупке.</p></div>
-        <div class="pain"><span class="n">02</span><h3>Визуал дешевле, чем ваши услуги</h3><p>Клиент видит профиль за три секунды и решает, стоит ли доверять вам дорогую процедуру или проект.</p></div>
-        <div class="pain"><span class="n">03</span><h3>Сайт не продаёт</h3><p>Из красивой ленты переходят на сайт и уходят: он устарел, медленный или не отвечает на вопросы.</p></div>
-        <div class="pain"><span class="n">04</span><h3>Пять подрядчиков, ноль ответственных</h3><p>Дизайнер, SMM-специалист, фотограф и разработчик работают отдельно, а за заявки не отвечает никто.</p></div>
+        <div class="pain"><span class="n">01</span><h3>Вас пролистывают.</h3><p>Продукт достоин внимания, но визуальная подача не объясняет, чем он отличается. Потенциальный покупатель не успевает увидеть вашу ценность.</p></div>
+        <div class="pain"><span class="n">02</span><h3>Публикации есть. Системы нет.</h3><p>Контент выходит регулярно, но не связан с конкретными целями бизнеса. Неясно, какие рубрики работают на узнаваемость, доверие и обращения.</p></div>
+        <div class="pain"><span class="n">03</span><h3>Интерес не превращается в обращение.</h3><p>Человек посмотрел публикацию, но не понял, где узнать стоимость, посмотреть ассортимент или оформить заказ. На каждом лишнем шаге можно потерять внимание.</p></div>
+        <div class="pain"><span class="n">04</span><h3>У бренда нет единого голоса.</h3><p>Дизайн, съёмки, соцсети и сайт выглядят как разные проекты. Вместо цельного впечатления аудитория получает разрозненные сообщения.</p></div>
       </div>
+      <p class="pains-final">Мы собираем стратегию, креатив и цифровые инструменты в одну систему — чтобы бренд узнавали, понимали и выбирали осознанно.</p>
+    </div>
+  </section>
+  <!-- METHOD: TWO TAPS -->
+  <section class="band band--paper" style="--bg-photo:none">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Наш подход</p>
+        <h2 class="cap">Два касания. Один сильный <i class="w">бренд</i></h2>
+        <p class="sub">Сначала человеку нужна причина остановиться. Затем — причина довериться и действовать. Мы продумываем оба этапа коммуникации.</p>
+      </div>
+      <div class="taps">
+        <div class="tap tap--first"><p class="tap-n">01 / First tap</p><h3>Зацепить.</h3><p>Находим характер бренда, формируем визуальный язык и создаём контент, который выделяет продукт среди похожих предложений.</p><p class="tap-tags">Позиционирование · Айдентика · Съёмки · Reels · Креативные рубрики</p></div>
+        <div class="tap-link" aria-hidden="true"><span></span><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2.3 4.5 6 4.1c2.2-.2 3.8 1 6 3.1 2.2-2.1 3.8-3.3 6-3.1 3.7.4 5.6 4.3 4 7.6C19.5 16.4 12 21 12 21z"/></svg><span></span></div>
+        <div class="tap tap--second"><p class="tap-n">02 / Second tap</p><h3>Убедить и направить.</h3><p>Помогаем аудитории разобраться в предложении и перейти к нужному действию: подписке, обращению, записи или покупке.</p><p class="tap-tags">Контент-стратегия · Понятные CTA · Сайты · Автоматизация · Аналитика</p></div>
+      </div>
+      <p class="taps-final">Double Tap — когда креатив и стратегия работают на одну цель.</p>
     </div>
   </section>
   <!-- TICKER -->
@@ -1272,87 +1514,158 @@ main { padding-bottom: 0; }
   <section class="band" style="--bg-photo:none">
     <div class="wrap">
       <div class="head">
-        <div class="meta"><span>Услуги</span><span>Полный цикл</span></div>
-        <div class="head-link"><h2 class="cap">Что мы <i class="w">делаем</i></h2><a class="arrow-link" href="services.html">Все услуги →</a></div>
+        <p class="eyebrow">Что мы делаем</p>
+        <div class="head-link"><h2 class="cap">От первой идеи до первого <i class="w">обращения</i></h2></div>
+        <p class="sub">Можем подключиться к одной задаче или собрать комплексную коммуникацию бренда — со стратегией, контентом и точками контакта с покупателем.</p>
       </div>
-      <div class="svc-grid svc-grid--home">
-        <a class="svc" href="services.html"><span class="n">01</span><h3>Стратегия</h3><ul class="svc-list"><li>план продвижения</li><li>позиционирование</li><li>портрет клиента</li><li>рубрикатор контента</li></ul></a>
-        <a class="svc" href="services.html"><span class="n">02</span><h3>Айдентика</h3><ul class="svc-list"><li>оформление соцсетей</li><li>логотип</li><li>фирменный стиль</li><li>брендбук (если требуется)</li></ul></a>
-        <a class="svc svc--main" href="services.html"><span class="flag">Основная услуга</span><span class="n">03</span><h3>SMM-ведение</h3><ul class="svc-list"><li>стратегия и контент-план</li><li>посты, Reels (монтаж, съёмка не входит) и истории</li><li>ведение аккаунта</li><li>ежемесячный отчёт</li></ul></a>
-        <a class="svc" href="services.html"><span class="n">04</span><h3>SMM + съёмка</h3><ul class="svc-list"><li>всё из SMM-ведения</li><li>выездная фото- и видеосъёмка в Москве</li><li>Reels под ключ: сценарий, съёмка, монтаж</li></ul></a>
-        <a class="svc" href="services.html"><span class="n">05</span><h3>Сайты</h3><ul class="svc-list"><li>лендинги</li><li>многостраничные сайты</li><li>редизайны</li></ul></a>
-        <a class="svc" href="services.html"><span class="n">06</span><h3>Чат-боты</h3><ul class="svc-list"><li>бот в Telegram</li><li>квиз для клиентов</li><li>онлайн-запись</li><li>заявки сразу вам в чат</li></ul></a>
-        <a class="svc svc--wide" href="services.html"><span class="n">07</span><h3>Настройка таргетированной рекламы</h3><ul class="svc-list svc-list--cols"><li>анализ аудитории и конкурентов</li><li>настройка кампаний в VK Рекламе и Яндекс Директе</li><li>посевы в Telegram-каналах</li><li>креативы и тексты объявлений</li><li>тесты и оптимизация стоимости заявки</li><li>маркировка рекламы по закону</li><li>еженедельный отчёт по заявкам</li></ul></a>
+      <div class="svc-grid svc-grid--tz">
+        <a class="svc svc--main" href="services.html#svc-smm"><span class="flag">Основное направление</span><span class="n">01 / SMM и стратегия</span><h3>Соцсети, у которых есть цель.</h3><p class="svc-p">Разбираемся в аудитории и продукте, выстраиваем контентную систему, создаём публикации и отслеживаем показатели, которые связаны с задачами бизнеса.</p><p class="svc-tags">Аудит · Позиционирование · Контент-стратегия · Ведение · Аналитика</p><span class="more">Обсудить SMM →</span></a>
+        <a class="svc svc--second" href="services.html#svc-content"><span class="n">02 / Контент-продакшн</span><h3>Контент, который хочется рассмотреть.</h3><p class="svc-p">Разрабатываем идеи, снимаем продукт и создаём короткие видео. Показываем не только внешний вид, но и фактуры, детали, атмосферу и характер бренда.</p><p class="svc-tags">Креатив · Сценарии · Фото · Reels · Монтаж</p><span class="more">Посмотреть съёмки →</span></a>
+        <a class="svc" href="services.html#svc-brand"><span class="n">03 / Брендинг</span><h3>Визуальный язык, который узнают.</h3><p class="svc-p">Помогаем бренду выглядеть цельно: от позиционирования и фирменного стиля до оформления аккаунта и правил визуальной коммуникации.</p><p class="svc-tags">Позиционирование · Айдентика · Digital-упаковка</p><span class="more">Обсудить брендинг →</span></a>
+        <a class="svc" href="services.html#svc-digital"><span class="n">04 / Сайты и digital</span><h3>Удобный путь от интереса к действию.</h3><p class="svc-p">Разрабатываем сайты и цифровые сценарии, которые помогают человеку быстро найти информацию, выбрать продукт и отправить обращение.</p><p class="svc-tags">Лендинги · Сайты · Чат-боты · Формы</p><span class="more">Обсудить digital →</span></a>
+        <a class="svc" href="services.html#svc-promo"><span class="n">05 / Продвижение</span><h3>Показываем бренд тем, кому он интересен.</h3><p class="svc-p">Исследуем аудиторию, тестируем каналы продвижения, создаём рекламные идеи и оцениваем результат каждого запуска по доступным данным.</p><p class="svc-tags">Реклама · Блогеры · Креативы · Оптимизация</p><span class="more">Обсудить продвижение →</span></a>
+      </div>
+      <div class="sec-more"><a class="btn btn--wine" href="services.html">Все услуги и форматы работы</a></div>
+    </div>
+  </section>
+  <!-- HOME: REAL CASES -->
+  <section class="band band--paper" id="real" style="--bg-photo:none">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Реализованные проекты</p>
+        <h2 class="cap">Наши работы говорят визуалом. Данные добавляют им <i class="w">веса</i></h2>
+        <p class="sub">Показываем, с какой задачей начали, какие решения предложили и какие результаты зафиксированы по итогам работы.</p>
+      </div>
+      <div class="cards cards--real">
+        <a class="ccard" href="case-krossovki.html" data-ev="case_open" data-case="krossovki">
+          <div class="pic"><img src="img-reel-c-nb.jpg" alt="Постер New Balance 1906R для «Времени кроссовок»" loading="lazy" style="object-position:center top"><span class="badge badge--real">Реализованный проект · Retail</span></div>
+          <div class="body">
+            <p class="niche">Retail / SMM / Контент · Томск</p>
+            <h3>Время кроссовок <span class="handle">@vremya.krossovok</span></h3>
+            <p class="ctitle">Из товарной витрины — в бренд, за которым интересно следить.</p>
+            <p>Обновили подход к контенту обувного магазина: больше образов, обзоров, живых съёмок и понятных поводов написать в директ.</p>
+            <div class="res res--3"><div><b>120+</b><span>обращений за 3 месяца</span></div><div><b>+1 500</b><span>подписчиков за 3 месяца</span></div><div><b>21</b><span>новый покупатель за месяц</span></div></div>
+            <span class="more">Смотреть кейс →</span>
+          </div>
+        </a>
+        <a class="ccard" href="case-bublik.html" data-ev="case_open" data-case="bublik">
+          <div class="pic"><img src="img-reel-c-bublik.jpg" alt="Логотип кондитерской «Бублик» на крафтовой карточке" loading="lazy" style="object-position:center"><span class="badge badge--real">Реализованный проект · Food</span></div>
+          <div class="body">
+            <p class="niche">Food / SMM / Съёмка · Томск</p>
+            <h3>Бублик <span class="handle">@bublikbakery</span></h3>
+            <p class="ctitle">Контент, от которого хочется заказать десерт.</p>
+            <p>Сделали акцент на визуальной подаче продукта: текстуры, крупные планы, атмосфера кондитерской и удобное знакомство с ассортиментом.</p>
+            <div class="res res--3"><div><b>18%</b><span>вовлечённость (ER по подписчикам)</span></div><div><b>+1 000</b><span>подписчиков за 4 месяца</span></div><div><b>34</b><span>покупателя из соцсетей за месяц</span></div></div>
+            <span class="more">Смотреть кейс →</span>
+          </div>
+        </a>
+      </div>
+      <div class="sec-more"><a class="btn btn--wine" href="cases.html">Смотреть все проекты</a></div>
+    </div>
+  </section>
+
+  <!-- HOME: CREATIVE LAB -->
+  <section class="band" id="lab" style="--bg-photo:none">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Creative Lab</p>
+        <h2 class="cap">Мы видим потенциал ещё до начала <i class="w">сотрудничества</i></h2>
+        <p class="sub">Исследуем бренды, изучаем их публичную коммуникацию и разрабатываем собственные концепции — от нового визуального языка до сценариев контента и пользовательского пути.</p>
+        <p class="lab-note">Независимые концепции Double Tap на основе открытых материалов. Не являются реализованными заказами указанных брендов.</p>
+      </div>
+      <div class="cards cards--lab">
+        <a class="ccard ccard--lab" href="case-justwarm.html">
+          <div class="pic"><img src="img-reel-c-printer.jpg" alt="Визуализация концепции Just Warm" loading="lazy" style="object-position:center 30%"><span class="badge">Независимая концепция</span></div>
+          <div class="body">
+            <p class="niche">Fashion · бренд тёплой одежды</p>
+            <h3>Just Warm</h3>
+            <p class="ctitle">Из каталога одежды — в цельную fashion-историю.</p>
+            <p>Предложили более узнаваемую визуальную систему, подачу коллекций и шесть контентных форматов.</p>
+            <p class="facts-line">Аудит · 6 контентных форматов · Концепция ленты · Сценарий Reels</p>
+            <span class="more">Смотреть концепцию →</span>
+          </div>
+        </a>
+        <a class="ccard ccard--lab" href="case-seebeauty.html">
+          <div class="pic"><img src="img-reel-c-sb-bottle.jpg" alt="Визуализация концепции SeeBeauty" loading="lazy" style="object-position:center"><span class="badge">Независимая концепция</span></div>
+          <div class="body">
+            <p class="niche">Beauty · клиника косметологии</p>
+            <h3>SeeBeauty</h3>
+            <p class="ctitle">Эстетика, которая помогает выстраивать доверие.</p>
+            <p>Продумали экспертный контент, навигацию по услугам и визуальную подачу, в которой эстетика поддерживает профессиональное позиционирование.</p>
+            <p class="facts-line">Аудит · 6 направлений контента · Визуальная система</p>
+            <span class="more">Смотреть концепцию →</span>
+          </div>
+        </a>
+        <a class="ccard ccard--lab" href="case-vremya.html">
+          <div class="pic"><img src="img-reel-c-stack.jpg" alt="Визуализация концепции «Время кроссовок 2.0»" loading="lazy" style="object-position:center"><span class="badge">Digital-концепция</span></div>
+          <div class="body">
+            <p class="niche">Digital / UX · сайт и бот</p>
+            <h3>Время кроссовок 2.0</h3>
+            <p class="ctitle">От интереса в соцсетях — к более простому пути заказа.</p>
+            <p>Разработали сценарий сайта и Telegram-бота, который сокращает количество шагов в предложенном маршруте пользователя с шести до трёх.</p>
+            <p class="facts-line">6 → 3 шага в проектной модели · Сайт-витрина · Сценарий бота</p>
+            <span class="more">Смотреть концепцию →</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
-  <!-- HOME CASES -->
-  <section class="band band--paper" style="--bg-photo:none">
+  <!-- WHY US -->
+  <section class="band band--wine" style="--bg-photo:none">
     <div class="wrap">
       <div class="head">
-        <div class="head-link"><h2 class="cap">Кейсы, которыми <i class="w w--xl">гордимся</i></h2><a class="arrow-link" href="cases.html">Все кейсы →</a></div>
+        <p class="eyebrow">Почему Double Tap</p>
+        <h2 class="cap">Мы не отдаём ваш бренд на <i class="w">конвейер</i></h2>
+        <p class="sub">Для нас важно понимать бизнес, а не просто получать задачи в мессенджере. Поэтому мы участвуем в стратегии, предлагаем идеи и объясняем, зачем нужно каждое решение.</p>
       </div>
-      <div class="cards">
-        <a class="ccard" href="case-krossovki.html" data-tags="smm retail">
-          <div class="pic"><img src="img-reel-c-nb.jpg" alt="Постер New Balance 1906R для «Времени кроссовок»" loading="lazy" style="object-position:center top"><span class="badge">Маркетинг, SMM и съёмка</span></div>
-          <div class="body">
-            <p class="niche">Магазин кроссовок · Томск</p>
-            <h3>Время кроссовок <span class="handle">@vremya.krossovok</span></h3>
-            <p>Провели аудит ниши и аудитории, перестроили ленту вокруг людей и образов, сняли обзоры и распаковки, запустили Telegram-канал и подключили микроблогеров.</p>
-            <div class="res"><div><b>120+</b><span>заявок в директ</span></div><div><b>+1 500</b><span>подписчиков</span></div></div>
-            <span class="more">Смотреть кейс →</span>
-          </div>
-        </a>
-        <a class="ccard" href="case-bublik.html" data-tags="smm horeca">
-          <div class="pic"><img src="img-reel-c-bublik.jpg" alt="Логотип кондитерской «Бублик» на крафтовой карточке" loading="lazy" style="object-position:center"><span class="badge">Маркетинг, SMM и съёмка</span></div>
-          <div class="body">
-            <p class="niche">Кофейня-кондитерская · Томск</p>
-            <h3>Бублик <span class="handle">@bublikbakery</span></h3>
-            <p>Сформировали позиционирование и контент-план, сняли продукт и торты в разрезе, разработали новую палитру, типографику и шаблоны постов и историй.</p>
-            <div class="res"><div><b>18%</b><span>вовлечённость</span></div><div><b>+1 000</b><span>подписчиков</span></div></div>
-            <span class="more">Смотреть кейс →</span>
-          </div>
-        </a>
-        <a class="ccard" href="case-justwarm.html" data-tags="concept fashion smm">
-          <div class="pic"><img src="img-reel-c-printer.jpg" alt="Образы Just Warm на ленте из принтера" loading="lazy" style="object-position:center 30%"><span class="badge">Концепт-редизайн</span></div>
-          <div class="body">
-            <p class="niche">Бренд тёплой одежды</p>
-            <h3>Just Warm <span class="handle">@just.warm2.0</span></h3>
-            <p>Разобрали профиль и Reels, выстроили единую эстетику бренда, собрали студийную визуализацию ленты, придумали 6 форматов контента и написали сценарий ролика.</p>
-            <div class="res"><div><b>6</b><span>форматов контента</span></div><div><b>×2–3</b><span>цель по просмотрам Reels</span></div></div>
-            <span class="more">Смотреть концепт →</span>
-          </div>
-        </a>
-        <a class="ccard" href="case-seebeauty.html" data-tags="concept beauty smm">
-          <div class="pic"><img src="img-reel-c-sb-bottle.jpg" alt="Сыворотка в стиле обновлённой ленты клиники" loading="lazy" style="object-position:center"><span class="badge">Концепт-редизайн</span></div>
-          <div class="body">
-            <p class="niche">Косметология · клиника</p>
-            <h3>SeeBeauty <span class="handle">@seebeauty_clinic</span></h3>
-            <p>Провели аудит профиля, сформировали позиционирование «тихая роскошь ухода», разработали рубрики-обложки и единый визуальный язык ленты, переупаковали шапку и актуальные под запись.</p>
-            <div class="res"><div><b>6</b><span>форматов контента</span></div><div><b>+30–60%</b><span>цель по записям за 3 месяца</span></div></div>
-            <span class="more">Смотреть концепт →</span>
-          </div>
-        </a>
+      <div class="why">
+        <div class="why-i"><span class="n">01</span><h3>Работа напрямую с основателями.</h3><p>Ключевые решения и коммуникация проходят с участием людей, которые отвечают за стратегию и визуальный результат проекта.</p></div>
+        <div class="why-i"><span class="n">02</span><h3>Смысл важнее количества постов.</h3><p>Мы не заполняем ленту ради отчёта. Каждый формат должен работать на узнаваемость, доверие, интерес к продукту или целевое действие.</p></div>
+        <div class="why-i"><span class="n">03</span><h3>Единый образ бренда.</h3><p>Согласуем контент, дизайн, сайт и сообщения так, чтобы пользователь узнавал бренд в каждой точке контакта.</p></div>
+        <div class="why-i"><span class="n">04</span><h3>Данные вместо догадок.</h3><p>Смотрим на доступные показатели, проверяем гипотезы и определяем, какие решения стоит усиливать, а какие — менять.</p></div>
       </div>
+    </div>
+  </section>
+  <!-- PROCESS -->
+  <section class="band" style="--bg-photo:none">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Как мы работаем</p>
+        <h2 class="cap">Изучаем. Придумываем. Создаём. <i class="w">Улучшаем</i></h2>
+        <p class="sub">Проект движется по понятным этапам, а вы видите, что команда делает сейчас и какое решение мы готовим дальше.</p>
+      </div>
+      <ol class="process">
+        <li><span class="n">01 / Погружение</span><h3>Сначала разбираемся в бизнесе.</h3><p>Изучаем продукт, конкурентов, аудиторию и текущие точки контакта. Определяем главные задачи и ограничения проекта.</p><p class="out">На выходе — приоритеты и согласованный бриф.</p></li>
+        <li><span class="n">02 / Стратегия</span><h3>Находим подходящую идею.</h3><p>Формируем позиционирование, визуальное направление, рубрики и план действий. Каждое решение связываем с задачей бизнеса.</p><p class="out">На выходе — концепция и план работ.</p></li>
+        <li><span class="n">03 / Реализация</span><h3>Воплощаем идеи в контент и digital.</h3><p>Снимаем, пишем, оформляем, запускаем и согласовываем материалы. Следим, чтобы коммуникация оставалась цельной.</p><p class="out">На выходе — готовые публикации и запущенные инструменты.</p></li>
+        <li><span class="n">04 / Аналитика</span><h3>Смотрим, что действительно работает.</h3><p>Анализируем показатели, обсуждаем результаты и корректируем следующие действия.</p><p class="out">На выходе — выводы и план улучшений.</p></li>
+      </ol>
     </div>
   </section>
   <!-- FINAL -->
   <section class="band band--wine final" style="--bg-photo:none">
     <div class="wrap">
       <div class="final-copy">
-        <h2 class="cap">Обсудим ваш <i class="w">проект?</i></h2>
-        <p style="color:var(--on-wine-muted);max-width:52ch">Пришлите ссылку на аккаунт и коротко опишите задачу. Ответим в течение рабочего дня.</p>
+        <p class="eyebrow">Начнём с вашего бренда</p>
+        <h2 class="cap">Ваш бренд может больше. Покажем, с чего <i class="w">начать</i></h2>
+        <p style="color:var(--on-wine-muted);max-width:52ch">Отправьте ссылку на аккаунт или сайт. Посмотрим, какое впечатление создаёт бренд, где коммуникация теряет ясность и какие изменения стоит попробовать в первую очередь.</p>
+        <ul class="get-list">
+          <li>Разбор первого впечатления от профиля или сайта.</li>
+          <li>Главные точки роста контента и визуальной упаковки.</li>
+          <li>Три конкретные рекомендации для следующего шага.</li>
+        </ul>
         <div class="cta-row">
-          <a class="btn btn--cream" href="contact.html">Получить бесплатный аудит</a>
-          <a class="btn btn--line-cream tg-link" href="https://t.me/double_tappp" target="_blank" rel="noopener">Telegram <span class="tg-handle">@double_tappp</span></a>
+          <a class="btn btn--cream" href="contact.html#audit" data-ev="cta_audit_click">Получить бесплатный разбор</a>
+          <a class="btn btn--line-cream tg-link" href="https://t.me/double_tappp" target="_blank" rel="noopener" data-ev="tg_click">Написать нам в Telegram</a>
         </div>
+        <p class="fine">Без обязательства начинать сотрудничество.</p>
       </div>
       <div class="stage">
-        <div class="phone" id="tapPhone" role="button" tabindex="0" aria-label="Поставить лайк">
+        <div class="phone" id="tapPhone" role="button" tabindex="0" aria-label="Двойное касание: поставить лайк">
           <div class="screen">
             <img src="img-bublik-1.jpg" alt="Контент для кофейни «Бублик»" loading="lazy">
             <div class="heart" id="heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2.3 4.5 6 4.1c2.2-.2 3.8 1 6 3.1 2.2-2.1 3.8-3.3 6-3.1 3.7.4 5.6 4.3 4 7.6C19.5 16.4 12 21 12 21z"/></svg></div>
-            <div class="likes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2.3 4.5 6 4.1c2.2-.2 3.8 1 6 3.1 2.2-2.1 3.8-3.3 6-3.1 3.7.4 5.6 4.3 4 7.6C19.5 16.4 12 21 12 21z"/></svg><span id="likeCount">1 248</span></div>
+            
           </div>
         </div>
         <p class="tap-hint" aria-hidden="true">тапните дважды</p>
@@ -1365,40 +1678,53 @@ main { padding-bottom: 0; }
   <div class="wrap">
     <div class="brand">
       <b>Double</b> <i>Tap</i>
-      <p>Маркетинговое агентство полного цикла: стратегия, айдентика, SMM со съёмкой, сайты и чат-боты. Москва.</p>
+      <p>Double Tap — креативное SMM-агентство. Стратегия, контент и digital-решения для брендов, которым есть что сказать. Москва.</p>
     </div>
     <div>
       <h4>Навигация</h4>
-      <ul><li><a href="index.html">Главная</a></li><li><a href="services.html">Услуги</a></li><li><a href="cases.html">Кейсы</a></li><li><a href="about.html">О нас</a></li><li><a href="contact.html">Связаться</a></li></ul>
+      <ul><li><a href="services.html">Услуги</a></li><li><a href="cases.html">Кейсы</a></li><li><a href="about.html">О нас</a></li><li><a href="contact.html">Контакты</a></li></ul>
     </div>
     <div>
       <h4>Услуги</h4>
-      <ul><li><a href="services.html">Стратегия и айдентика</a></li><li><a href="services.html">SMM и съёмка</a></li><li><a href="services.html">Сайты и чат-боты</a></li><li><a href="services.html#prices">Стоимость</a></li></ul>
+      <ul><li><a href="services.html#svc-smm">SMM и стратегия</a></li><li><a href="services.html#svc-content">Контент-продакшн</a></li><li><a href="services.html#svc-brand">Брендинг</a></li><li><a href="services.html#svc-digital">Сайты и digital</a></li><li><a href="services.html#prices">Тарифы</a></li></ul>
     </div>
     <div>
       <h4>Связь</h4>
-      <ul><li><a class="tg-link" href="https://t.me/double_tappp" target="_blank" rel="noopener">Telegram <span class="tg-handle">@double_tappp</span></a></li><li><a href="contact.html">Бесплатный аудит</a></li><li><a href="links.html">Все ссылки</a></li></ul>
+      <ul><li><a class="tg-link" href="https://t.me/double_tappp" target="_blank" rel="noopener" data-ev="tg_click">Telegram <span class="tg-handle">@double_tappp</span></a></li><li><a href="contact.html#audit">Обсудить проект</a></li><li><a href="links.html">Все ссылки</a></li></ul>
     </div>
-    <p class="copy">© <span class="year">2026</span> Double Tap · Маркетинговое агентство, Москва</p>
+    <p class="copy">© <span class="year">2026</span> Double Tap. Все права защищены. · <a href="privacy.html">Политика обработки персональных данных</a></p>
   </div>
 </footer>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 /* Каждая страница открывается сверху (кроме ссылок с #якорем) */
 (function () {
   try { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch (e) {}
   const top = () => { if (!location.hash) { const h = document.documentElement, b = h.style.scrollBehavior; h.style.scrollBehavior = "auto"; window.scrollTo(0, 0); h.style.scrollBehavior = b; } };
+  const toHash = () => { if (location.hash.length > 1) { const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el && !el.hidden) el.scrollIntoView({ block: "start" }); } };
   top(); window.addEventListener("DOMContentLoaded", top); window.addEventListener("pageshow", top);
+  window.addEventListener("load", () => setTimeout(toHash, 30));
+})();
+/* ===== Мобильное меню: открытие кнопкой, закрытие по Esc / тапу вне меню ===== */
+(function () {
+  const run = () => {
+    const b = document.querySelector(".burger"), n = document.getElementById("siteNav"); if (!b || !n) return;
+    const set = on => { n.classList.toggle("open", on); b.setAttribute("aria-expanded", on); };
+    b.addEventListener("click", e => { e.stopPropagation(); set(!n.classList.contains("open")); if (n.classList.contains("open")) n.querySelector("a").focus(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && n.classList.contains("open")) { set(false); b.focus(); } });
+    document.addEventListener("click", e => { if (n.classList.contains("open") && !n.contains(e.target)) set(false); });
+  };
+  document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", run) : run();
 })();
 /* ===== Настройки: меняйте здесь ===== */
 const TG = "double_tappp"; // ник Telegram или бота для заявок, без @
+const YM_ID = 0; // номер счётчика Яндекс Метрики; 0 = аналитика выключена
 const WEB_CASES = [
   // Добавьте сайты Саши: { title, type, text, url }. При заполненном url появится QR-код.
   { title: "Сайт клиента", type: "Сайт под ключ", text: "Здесь будет кейс: задача, решение и ссылка на живой сайт.", url: "" },
   { title: "Редизайн сайта", type: "Редизайн", text: "Здесь будет кейс: что было, что изменили и как это повлияло на заявки.", url: "" }
 ];
-const TICKER = [["Стратегия", ""], ["Айдентика", "и брендбук"], ["SMM", ""], ["Съёмка", "в Москве"], ["Сайты", ""], ["Чат-боты", ""], ["Аналитика", ""]];
+const TICKER = [["Стратегия", ""], ["SMM", ""], ["Контент", "и съёмки"], ["Брендинг", ""], ["Digital", ""], ["Аналитика", ""]];
 
 const STEPS = [
   { t: "Позиционирование и стратегия", d: "Разбираем рынок, конкурентов и аудиторию. Формулируем, почему выбирают именно вас и за что клиенты готовы платить больше.",
@@ -1446,8 +1772,6 @@ addEventListener("scroll", () => { if (!frameTick) { frameTick = true; requestAn
 addEventListener("resize", cutFrame);
 cutFrame();
 
-/* ===== Инфографика: 120 заявок точками ===== */
-if ($("dots")) $("dots").innerHTML = "<i></i>".repeat(120);
 
 /* ===== Бегущая строка: едет только пока листают ===== */
 const ticker = $("ticker");
@@ -1504,30 +1828,44 @@ if (websEl) WEB_CASES.forEach(w => {
   if (w.url && window.QRCode) new QRCode(el.querySelector(".qr"), { text: w.url, width: 184, height: 184, colorDark: "#5A3A26", colorLight: "#FFFFFF" });
 });
 
-/* ===== Фильтры кейсов ===== */
-const filters = $("filters");
-if (filters) {
-  const cards = [...document.querySelectorAll("[data-tags]")];
-  filters.addEventListener("click", e => {
-    const b = e.target.closest("button"); if (!b) return;
-    filters.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
-    const f = b.dataset.f;
-    cards.forEach(c => c.hidden = f !== "all" && !c.dataset.tags.split(" ").includes(f));
+/* ===== Вкладки кейсов: реализованные / Creative Lab ===== */
+const tabs = $("caseTabs");
+if (tabs) {
+  const bs = [...tabs.querySelectorAll("[role=tab]")];
+  const show = id => bs.forEach(b => { const on = b.getAttribute("aria-controls") === id; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; $(b.getAttribute("aria-controls")).hidden = !on; });
+  tabs.addEventListener("click", e => { const b = e.target.closest("[role=tab]"); if (b) { show(b.getAttribute("aria-controls")); history.replaceState(null, "", "#" + b.getAttribute("aria-controls")); } });
+  tabs.addEventListener("keydown", e => {
+    const i = bs.indexOf(document.activeElement); if (i < 0 || !["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+    const n = bs[(i + (e.key === "ArrowRight" ? 1 : -1) + bs.length) % bs.length]; show(n.getAttribute("aria-controls")); n.focus();
   });
+  if (location.hash === "#lab") show("lab");
 }
+
+/* ===== Аналитика: Яндекс Метрика + события из data-ev. Личные данные не передаём ===== */
+function track(goal, params) {
+  try { if (YM_ID && window.ym) window.ym(YM_ID, "reachGoal", goal, params || {}); } catch (e) {}
+}
+if (YM_ID) {
+  (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0]; k.async = 1; k.src = r; a.parentNode.insertBefore(k, a); })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  window.ym(YM_ID, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true });
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-ev]"); if (!a) return;
+  track(a.dataset.ev, { page: location.pathname.split("/").pop() || "index.html", case: a.dataset.case || "" });
+});
 
 /* ===== Telegram, год ===== */
 document.querySelectorAll(".tg-link").forEach(a => a.href = "https://t.me/" + TG);
 document.querySelectorAll(".tg-handle").forEach(s => s.textContent = "@" + TG);
 document.querySelectorAll(".year").forEach(s => s.textContent = new Date().getFullYear());
 
-/* ===== Двойной тап ===== */
-const phone = $("tapPhone"), heart = $("heart"), cnt = $("likeCount");
-if (phone && heart && cnt) {
-  let likes = 1248, lastTap = 0;
-  const like = () => { heart.classList.remove("pop"); void heart.offsetWidth; heart.classList.add("pop"); likes++; cnt.textContent = likes.toLocaleString("ru-RU"); };
+/* ===== Двойной тап: сердце на макете телефона (без счётчика) ===== */
+const phone = $("tapPhone"), heart = $("heart");
+if (phone && heart) {
+  let lastTap = 0;
+  const like = () => { heart.classList.remove("pop"); void heart.offsetWidth; heart.classList.add("pop"); };
   phone.addEventListener("dblclick", like);
-  phone.addEventListener("touchend", e => { const t = Date.now(); if (t - lastTap < 320) { e.preventDefault(); like(); } lastTap = t; });
+  phone.addEventListener("click", like);
   phone.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); like(); } });
   if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const io = new IntersectionObserver(es => { if (es[0].isIntersecting) { like(); io.disconnect(); } }, { threshold: .6 });
@@ -1535,72 +1873,78 @@ if (phone && heart && cnt) {
   }
 }
 
-/* ===== Квиз-аудит ===== */
+/* ===== Квиз: 4 шага ===== */
 const quiz = $("quiz");
 if (quiz) {
-  const Q = [
-    { k: "sphere", t: "Чем занимается ваш бизнес?", type: "one", o: ["Клиника или эстетическая медицина", "Дизайн интерьеров, ремонт, мебель", "Премиальный бренд: одежда, украшения, товары", "Ресторан, кафе, гастропроект", "Эксперт или личный бренд", "Другое"] },
-    { k: "need", t: "Что нужно в первую очередь?", type: "many", o: ["Стратегия и позиционирование", "Айдентика и брендбук", "Оформление соцсетей", "Ведение SMM со съёмкой", "Сайт или редизайн", "Чат-бот для заявок", "Не знаю, нужен аудит"] },
-    { k: "budget", t: "Какой бюджет на маркетинг в месяц?", type: "one", o: ["60–100 тыс. ₽", "100–200 тыс. ₽", "Больше 200 тыс. ₽", "Пока не определились"] },
-    { k: "contact", t: "Куда прислать аудит?", type: "fields" }
+  const GOALS = ["Больше заявок и обращений", "Сильнее контент и съёмки", "Обновить визуальную упаковку", "Нужен сайт или digital-решение", "Комплексное продвижение", "Нужен взгляд со стороны"];
+  const WHEN = ["Как можно скорее", "В течение месяца", "Пока изучаю варианты"];
+  const ans = { brand: "", link: "", goal: "", about: "", when: "", name: "", contact: "", agree: false };
+  const STEPS_Q = [
+    { h: "Начнём с вашего бренда.", s: "Как называется проект и где его можно посмотреть?" },
+    { h: "Что сейчас важнее всего?", s: "Выберите направление, которое хотите усилить в первую очередь." },
+    { h: "Расскажите немного о задаче.", s: "Что сейчас не устраивает и какого изменения вы хотите?" },
+    { h: "Куда отправить ответ?", s: "Оставьте удобный контакт — свяжемся с вами по вашему запросу." }
   ];
-  const ans = { sphere: "", need: [], budget: "", link: "", name: "", contact: "" };
-  let qi = 0;
-  const qbody = $("qbody"), bar = $("bar"), err = $("err"), back = $("back"), next = $("next"), qnav = $("qnav");
-  const esc = s => s.replace(/[<>&"]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
+  let qi = 0, started = false;
+  const qbody = $("qbody"), bar = $("bar"), err = $("err"), back = $("back"), next = $("next"), qnav = $("qnav"), qstep = $("qstep");
+  const esc = s => String(s).replace(/[<>&"]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
+  const field = (id, label, val, ph = "", type = "text", hint = "") => `<div class="field"><label for="f-${id}">${label}</label><input id="f-${id}" name="${id}" type="${type}" placeholder="${ph}" value="${esc(val)}"${hint ? ` aria-describedby="h-${id}"` : ""}>${hint ? `<small id="h-${id}">${hint}</small>` : ""}<span class="ferr" id="e-${id}"></span></div>`;
+  const radios = (name, list, cur) => `<div class="opts">` + list.map((o, i) => `<label class="opt"><input type="radio" name="${name}" id="${name}${i}" value="${esc(o)}"${cur === o ? " checked" : ""}><span>${o}</span></label>`).join("") + `</div>`;
   const renderQ = () => {
-    const q = Q[qi]; err.textContent = "";
-    bar.style.width = ((qi + 1) / Q.length * 100) + "%";
+    const st = STEPS_Q[qi]; err.textContent = "";
+    bar.style.width = ((qi + 1) / STEPS_Q.length * 100) + "%";
+    qstep.textContent = `Шаг ${qi + 1} из ${STEPS_Q.length}`;
     back.style.visibility = qi ? "visible" : "hidden";
-    next.textContent = qi === Q.length - 1 ? "Получить аудит" : "Дальше";
-    if (q.type === "fields") {
-      qbody.innerHTML = `<fieldset class="q"><legend>${q.t}</legend><div class="fields">
-        <div class="field"><label for="f-link">Ссылка на аккаунт или сайт</label><input id="f-link" name="link" placeholder="instagram.com/… или t.me/…" value="${esc(ans.link)}"></div>
-        <div class="field"><label for="f-name">Как к вам обращаться</label><input id="f-name" name="name" autocomplete="name" value="${esc(ans.name)}"></div>
-        <div class="field"><label for="f-contact">Telegram или телефон</label><input id="f-contact" name="contact" placeholder="@username" value="${esc(ans.contact)}"></div>
-      </div></fieldset>`;
-      return;
-    }
-    const multi = q.type === "many";
-    qbody.innerHTML = `<fieldset class="q"><legend>${q.t}${multi ? `<span style="display:block;font:400 .85rem var(--f-body);color:var(--muted);margin-top:8px">Можно выбрать несколько</span>` : ""}</legend><div class="opts">` +
-      q.o.map((o, i) => {
-        const on = multi ? ans[q.k].includes(o) : ans[q.k] === o;
-        return `<label class="opt"><input type="${multi ? "checkbox" : "radio"}" name="${q.k}" id="${q.k}${i}" value="${o}"${on ? " checked" : ""}><span>${o}</span></label>`;
-      }).join("") + `</div></fieldset>`;
+    next.textContent = qi === STEPS_Q.length - 1 ? "Отправить заявку" : "Продолжить";
+    let inner = "";
+    if (qi === 0) inner = `<div class="fields">${field("brand", "Название бренда", ans.brand, "Например, название вашего магазина")}${field("link", "Ссылка на соцсети или сайт", ans.link, "https://...", "url")}</div>`;
+    if (qi === 1) inner = radios("goal", GOALS, ans.goal) + `<span class="ferr" id="e-goal"></span>`;
+    if (qi === 2) inner = `<div class="fields"><div class="field"><label for="f-about">Описание задачи</label><textarea id="f-about" name="about" rows="4" placeholder="Например: хотим обновить контент, запустить Reels и сделать профиль понятнее для покупателей.">${esc(ans.about)}</textarea><span class="ferr" id="e-about"></span></div></div><fieldset class="q q--sub"><legend>Когда хотите начать? <span class="opt-l">(необязательно)</span></legend>${radios("when", WHEN, ans.when)}</fieldset>`;
+    if (qi === 3) inner = `<div class="fields">${field("name", "Как к вам обращаться?", ans.name, "", "text")}${field("contact", "Ваш Telegram или email", ans.contact, "@username или mail@example.com", "text", "Укажите тот канал, который вам удобнее проверять.")}</div>
+      <label class="agree"><input type="checkbox" id="f-agree"${ans.agree ? " checked" : ""}><span>Я ознакомился(ась) с <a href="privacy.html" target="_blank">политикой обработки персональных данных</a> и соглашаюсь с обработкой данных для ответа на моё обращение.</span></label><span class="ferr" id="e-agree"></span>`;
+    qbody.innerHTML = `<fieldset class="q"><legend>${st.h}<span class="q-sub">${st.s}</span></legend>${inner}</fieldset>`;
   };
-  const collect = () => {
-    const q = Q[qi];
-    if (q.type === "fields") {
-      ["link", "name", "contact"].forEach(k => ans[k] = $("f-" + k).value.trim());
-      return ans.link && ans.contact ? "" : "Укажите ссылку на аккаунт и контакт для связи.";
-    }
-    if (q.type === "many") { ans[q.k] = [...qbody.querySelectorAll("input:checked")].map(i => i.value); return ans[q.k].length ? "" : "Выберите хотя бы один вариант."; }
-    const c = qbody.querySelector("input:checked"); ans[q.k] = c ? c.value : ""; return c ? "" : "Выберите вариант.";
+  const v = id => { const el = $("f-" + id); return el ? el.value.trim() : ""; };
+  const mark = (id, msg) => { const e = $("e-" + id), f = $("f-" + id); if (e) e.textContent = msg; if (f) f.setAttribute("aria-invalid", msg ? "true" : "false"); return msg; };
+  const REQ = "Пожалуйста, заполните это поле.";
+  const collect = check => {
+    if (qi === 0) { ans.brand = v("brand"); ans.link = v("link");
+      if (!check) return true;
+      const bad = [mark("brand", ans.brand ? "" : REQ), mark("link", !ans.link ? REQ : /^(https?:\/\/)?[\w.-]+\.[a-zа-я]{2,}(\/\S*)?$/i.test(ans.link) || /^@\w{3,}$/.test(ans.link) ? "" : "Проверьте ссылку на сайт или аккаунт.")];
+      return !bad.some(Boolean); }
+    if (qi === 1) { const c = qbody.querySelector("input[name=goal]:checked"); ans.goal = c ? c.value : ""; return !check || !mark("goal", ans.goal ? "" : "Выберите один вариант."); }
+    if (qi === 2) { ans.about = v("about"); const c = qbody.querySelector("input[name=when]:checked"); ans.when = c ? c.value : ""; return !check || !mark("about", ans.about ? "" : REQ); }
+    if (qi === 3) { ans.name = v("name"); ans.contact = v("contact"); ans.agree = $("f-agree").checked;
+      if (!check) return true;
+      const okC = /^@?[a-z0-9_]{5,32}$/i.test(ans.contact) || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ans.contact);
+      const bad = [mark("name", ans.name ? "" : REQ), mark("contact", okC ? "" : "Укажите Telegram или email, по которому с вами можно связаться."), mark("agree", ans.agree ? "" : "Нужно согласие на обработку данных, чтобы мы могли ответить.")];
+      return !bad.some(Boolean); }
+    return true;
   };
   const finish = () => {
-    const text = `Заявка на бесплатный аудит\nСфера: ${ans.sphere}\nЗадачи: ${ans.need.join(", ")}\nБюджет: ${ans.budget}\nАккаунт: ${ans.link}\nИмя: ${ans.name || "—"}\nКонтакт: ${ans.contact}`;
-    bar.style.width = "100%"; qnav.hidden = true; err.textContent = "";
-    qbody.innerHTML = `<div class="done"><h3>Спасибо${ans.name ? ", " + esc(ans.name) : ""}!</h3>
-      <p style="color:var(--muted)">Скопируйте заявку и отправьте её нам в Telegram. Так мы сразу начнём разбор.</p>
+    const text = `Заявка на бесплатный разбор\nБренд: ${ans.brand}\nСсылка: ${ans.link}\nЗадача: ${ans.goal}\nОписание: ${ans.about}\nСтарт: ${ans.when || "—"}\nИмя: ${ans.name}\nКонтакт: ${ans.contact}`;
+    const url = `https://t.me/${TG}?text=${encodeURIComponent(text)}`;
+    try { navigator.clipboard && navigator.clipboard.writeText(text).catch(() => {}); } catch (e) {}
+    window.open(url, "_blank", "noopener");
+    track("lead_tg_open");
+    bar.style.width = "100%"; qnav.hidden = true; err.textContent = ""; qstep.textContent = "";
+    qbody.innerHTML = `<div class="done"><h3>Отлично, познакомились!</h3>
+      <p>Мы открыли чат <b>@${TG}</b> в Telegram с текстом вашей заявки — осталось нажать «Отправить». Если текст не подставился, он уже скопирован: просто вставьте его в чат.</p>
       <pre id="brief"></pre>
-      <div class="cta-row"><button type="button" class="btn btn--wine" id="copy">Скопировать заявку</button>
-      <a class="btn btn--ghost" href="https://t.me/${TG}" target="_blank" rel="noopener">Открыть Telegram</a></div></div>`;
+      <div class="cta-row"><a class="btn btn--wine" href="${url}" target="_blank" rel="noopener">Написать напрямую в Telegram</a><button type="button" class="btn btn--ghost" id="copy">Скопировать заявку</button></div></div>`;
     $("brief").textContent = text;
-    $("copy").addEventListener("click", e => {
-      const b = e.currentTarget;
-      navigator.clipboard.writeText(text).then(() => b.textContent = "Скопировано").catch(() => {
-        const r = document.createRange(); r.selectNodeContents($("brief"));
-        const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Выделено, нажмите Cmd+C";
-      });
-    });
+    $("copy").addEventListener("click", e => { const b = e.currentTarget;
+      navigator.clipboard.writeText(text).then(() => b.textContent = "Скопировано").catch(() => { const r = document.createRange(); r.selectNodeContents($("brief")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Выделено, нажмите Cmd+C"; }); });
   };
   const go = d => {
-    if (d > 0) { const m = collect(); if (m) { err.textContent = m; return; } }
-    else collect();
-    if (d > 0 && qi === Q.length - 1) return finish();
-    qi = Math.max(0, Math.min(Q.length - 1, qi + d)); renderQ();
+    if (d > 0 && !collect(true)) { err.textContent = "Проверьте отмеченные поля."; const f = qbody.querySelector("[aria-invalid=true]"); if (f) f.focus(); return; }
+    if (d < 0) collect(false);
+    if (d > 0 && qi === STEPS_Q.length - 1) return finish();
+    qi = Math.max(0, Math.min(STEPS_Q.length - 1, qi + d)); renderQ();
+    const first = qbody.querySelector("input,textarea"); if (first && started) first.focus({ preventScroll: true });
   };
-  qbody.addEventListener("change", e => { if (Q[qi].type === "one" && e.target.checked) setTimeout(() => go(1), 180); });
+  quiz.addEventListener("input", () => { if (!started) { started = true; track("quiz_start"); } }, { once: false });
+  quiz.addEventListener("change", e => { if (!started) { started = true; track("quiz_start"); } if (qi === 1 && e.target.name === "goal") setTimeout(() => go(1), 180); });
   quiz.addEventListener("submit", e => { e.preventDefault(); go(1); });
   back.addEventListener("click", () => go(-1));
   renderQ();
@@ -1615,6 +1959,5 @@ if (reelVideo) {
   }, { once: true });
 }
 </script>
-
 </body>
 </html>
